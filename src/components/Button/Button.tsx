@@ -1,0 +1,49 @@
+import React from "react";
+import { TouchableOpacityVenon, TouchableOpacityVenonProps } from "../Box/Box";
+import { Text } from "../Text/Text";
+import { ActivityIndicator } from "react-native";
+import { ThemeColors } from "../../theme/theme";
+import { buttonPresets } from "./ButtonPresets";
+// +++++++++++++++++
+// UI
+// preset: primary secondary
+// default, disabled
+// +++++++++++++++++
+export type ButtonPreset = "primary" | "outline";
+
+interface ButtonProps extends TouchableOpacityVenonProps {
+  title: string;
+  loading?: boolean;
+  preset?: ButtonPreset;
+  disabled?: boolean;
+}
+
+export function Button({
+  title,
+  loading,
+  preset = "primary",
+  disabled,
+  ...touchableOpacityVenonProps
+}: ButtonProps) {
+  const buttonPreset = buttonPresets[preset][disabled ? "disabled" : "default"];
+  return (
+    <TouchableOpacityVenon
+      disabled={disabled || loading}
+      paddingHorizontal="s20"
+      height={50}
+      alignItems="center"
+      justifyContent="center"
+      borderRadius="s12"
+      {...buttonPreset.container}
+      {...touchableOpacityVenonProps}
+    >
+      {loading ? (
+        <ActivityIndicator />
+      ) : (
+        <Text preset="paragraphMedium" bold color={buttonPreset.content}>
+          {title}
+        </Text>
+      )}
+    </TouchableOpacityVenon>
+  );
+}
