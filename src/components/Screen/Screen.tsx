@@ -10,7 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 
 interface ScreenProps {
   children: React.ReactNode;
-  canGoBack: boolean;
+  canGoBack?: boolean;
   scrollable?: boolean;
 }
 
@@ -36,7 +36,7 @@ export function Screen({
           {canGoBack && (
             <TouchableOpacityVenon
               flexDirection="row"
-              mb="s24"
+              marginBottom="s24"
               alignItems="center"
             >
               <Icon

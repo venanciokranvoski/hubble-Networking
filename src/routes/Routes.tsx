@@ -7,6 +7,7 @@ import { RootStackParamlist } from "../types/StackNavigatorTypes/StackNavigatorT
 import { LoginScreen } from "../screens/auth/LoginScreen/LoginScreen";
 import { SignUpScreen } from "../screens/auth/SignUpScreen/SignUpScreen";
 import { SucessScreen } from "../screens/auth/SucessScreen/SucessScreen";
+import { ForgotPasswordScreen } from "../screens/auth/ForgotPasswordScreen/ForgotPasswordScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamlist>();
 
@@ -20,6 +21,10 @@ export function Router() {
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
         <Stack.Screen name="SucessScreen" component={SucessScreen} />
+        <Stack.Screen
+          name="ForgotPasswordScreen"
+          component={ForgotPasswordScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,4 +1,3 @@
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { IconProps } from "../../components/Icon/Icon";
 
 export type RootStackParamlist = {
@@ -9,4 +8,5 @@ export type RootStackParamlist = {
     description: string;
     icon: Pick<IconProps, "name" | "color">;
   };
+  ForgotPasswordScreen: undefined;
 };
