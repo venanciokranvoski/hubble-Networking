@@ -1,16 +1,27 @@
-import React from "react";
-// ====== Files config navigation =========
+import React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { RootStackParamlist } from "../types/StackNavigatorTypes/StackNavigatorTypes";
-// ======= Screens =======
+import { NavigationContainer } from '@react-navigation/native';
+
+import { IconProps } from '@components';
+
+type RootStackParamlist = {
+  LoginScreen: undefined;
+  SignUpScreen: undefined;
+  SucessScreen: {
+    title: string;
+    description: string;
+    icon: Pick<IconProps, 'name' | 'color'>;
+  };
+  ForgotPasswordScreen: undefined;
+};
+
 import {
   LoginScreen,
   SignUpScreen,
   SucessScreen,
   ForgotPasswordScreen,
-} from "@screens";
+} from '@screens';
 
 const Stack = createNativeStackNavigator<RootStackParamlist>();
 
