@@ -1,9 +1,12 @@
 import React from "react";
-import { Screen } from "../../../components/Screen/Screen";
-import { Text } from "../../../components/Text/Text";
-import { TextInput } from "../../../components/TextInput/TextInput";
-import { Button } from "../../../components/Button/Button";
-import { useResetNavigationSucess } from "../../../hooks/useResetNavigationSucess";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import {
+  ForgotShemaValidation,
+  forgotShemaValidation,
+} from "./forgotShemaValidation";
+import { useResetNavigationSucess } from "@hooks";
+import { Screen, Text, Button, FormTextInput } from "@components";
 
 export function ForgotPasswordScreen() {
   const { reset } = useResetNavigationSucess();
@@ -18,6 +21,15 @@ export function ForgotPasswordScreen() {
       },
     });
   }
+
+  const { control } = useForm<ForgotShemaValidation>({
+    resolver: zodResolver(forgotShemaValidation),
+    defaultValues: {
+      recover_email: "",
+    },
+    mode: "onChange",
+  });
+
   return (
     <Screen canGoBack>
       <Text preset="headingLarge" color="grayBlack" mb="s16">
@@ -27,10 +39,12 @@ export function ForgotPasswordScreen() {
         Digite seu e-mail e enviaremos as instruções para redefinição de senha
       </Text>
 
-      <TextInput
-        label="E-mail"
-        placeholder="Digite seu E-mail"
-        boxSetting={{ marginBottom: "s40" }}
+      <FormTextInput
+        control={control}
+        name="recover_email"
+        label="Seu E-mail para recuperar"
+        placeholder="@ Digite seu e-mail"
+        boxSetting={{ mb: "s20" }}
       />
 
       <Button onPress={submitForm} title="Recuperar a senha" />

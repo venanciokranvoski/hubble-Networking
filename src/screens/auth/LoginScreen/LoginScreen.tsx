@@ -1,14 +1,20 @@
-import React from "react";
-import { Alert, View } from "react-native";
-import { Controller, useForm } from "react-hook-form";
-import { Text } from "../../../components/Text/Text";
-import { TextInput } from "../../../components/TextInput/TextInput";
-import { Button } from "../../../components/Button/Button";
-import { Screen } from "../../../components/Screen/Screen";
-import { PasswordInput } from "../../../components/PasswordInput/PasswordInput";
+import {
+  Button,
+  FormPasswordInput,
+  FormTextInput,
+  Screen,
+  Text,
+} from "@components";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import React from "react";
+import { useForm } from "react-hook-form";
+import { Alert, View } from "react-native";
 import { RootStackParamlist } from "../../../types/StackNavigatorTypes/StackNavigatorTypes";
-import { LoginFormType } from "./LoginFormTypes";
+import {
+  LoginShemaValidation,
+  loginShemaValidation,
+} from "./loginShemaValidation";
 
 type ScreenProps = NativeStackScreenProps<RootStackParamlist, "LoginScreen">;
 
@@ -21,11 +27,12 @@ export function LoginScreen({ navigation }: ScreenProps) {
     navigation.navigate("ForgotPasswordScreen");
   }
 
-  function handleAuthForm({ email, password }: LoginFormType) {
+  function handleAuthForm({ email, password }: LoginShemaValidation) {
     Alert.alert("EMAIL:" + email + " SENHA : " + password);
   }
 
-  const { control, formState, handleSubmit } = useForm<LoginFormType>({
+  const { control, formState, handleSubmit } = useForm<LoginShemaValidation>({
+    resolver: zodResolver(loginShemaValidation),
     defaultValues: {
       email: "",
       password: "",
@@ -43,48 +50,20 @@ export function LoginScreen({ navigation }: ScreenProps) {
           Digite seu e-mail e senha para entrar
         </Text>
 
-        <Controller
-          control={control}
+        <FormTextInput
           name="email"
-          rules={{
-            required: "E-mail Obrigatório!",
-            pattern: {
-              value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-              message: "Email inválido",
-            },
-          }}
-          render={({ field, fieldState }) => (
-            <TextInput
-              errorMessage={fieldState.error?.message}
-              onChangeText={field.onChange}
-              value={field.value}
-              label="E-mail"
-              placeholder="Digite seu E-mail"
-              boxSetting={{ marginBottom: "s20" }}
-            />
-          )}
+          control={control}
+          label="E-mail"
+          placeholder="E-mail"
+          boxSetting={{ mb: "s20" }}
         />
 
-        <Controller
-          control={control}
+        <FormPasswordInput
           name="password"
-          rules={{
-            required: "Senha obrigatória",
-            minLength: {
-              value: 6,
-              message: "É permitido criar senhas acima de 6 caracteres!",
-            },
-          }}
-          render={({ field, fieldState }) => (
-            <PasswordInput
-              errorMessage={fieldState.error?.message}
-              value={field.value}
-              onChangeText={field.onChange}
-              placeholder="Senha"
-              label="Sua senha"
-              boxSetting={{ marginBottom: "s10" }}
-            />
-          )}
+          control={control}
+          label="Senha"
+          placeholder="Digite sua senha"
+          boxSetting={{ mb: "s20" }}
         />
 
         <Text

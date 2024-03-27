@@ -1,8 +1,10 @@
 import React from "react";
-import { TouchableOpacityVenon, TouchableOpacityVenonProps } from "../Box/Box";
-import { Text } from "../Text/Text";
+import {
+  Text,
+  TouchableOpacityVenon,
+  TouchableOpacityVenonProps,
+} from "@components";
 import { ActivityIndicator } from "react-native";
-import { ThemeColors } from "../../theme/theme";
 import { buttonPresets } from "./ButtonPresets";
 // +++++++++++++++++
 // UI

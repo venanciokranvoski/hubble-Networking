@@ -5,12 +5,12 @@ import {
   TextStyle,
 } from "react-native";
 import { createText } from "@shopify/restyle";
-import { Theme } from "../../theme/theme";
+import { Theme } from "@theme";
 
 const SRText = createText<Theme>();
 export type SRTextProps = React.ComponentProps<typeof SRText>;
 
-interface TextProps extends SRTextProps {
+export interface TextProps extends SRTextProps {
   preset?: TextVariants;
   bold?: boolean;
   italic?: boolean;
