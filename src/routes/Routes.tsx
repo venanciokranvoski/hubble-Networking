@@ -1,13 +1,16 @@
 import React from "react";
 // ====== Files config navigation =========
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { RootStackParamlist } from "../types/StackNavigatorTypes/StackNavigatorTypes";
 // ======= Screens =======
-import { LoginScreen } from "../screens/auth/LoginScreen/LoginScreen";
-import { SignUpScreen } from "../screens/auth/SignUpScreen/SignUpScreen";
-import { SucessScreen } from "../screens/auth/SucessScreen/SucessScreen";
-import { ForgotPasswordScreen } from "../screens/auth/ForgotPasswordScreen/ForgotPasswordScreen";
+import {
+  LoginScreen,
+  SignUpScreen,
+  SucessScreen,
+  ForgotPasswordScreen,
+} from "@screens";
 
 const Stack = createNativeStackNavigator<RootStackParamlist>();
 

@@ -1,7 +1,7 @@
 import React, { Profiler } from "react";
 import { Pressable } from "react-native";
-import { ThemeColors } from "../../theme/theme";
-import { useAppTheme } from "../../hooks/useAppTheme";
+import { ThemeColors } from "@theme";
+import { useAppTheme } from "@hooks";
 import { EyeOffIcon } from "../../Icons/EyeOffIcon";
 import { ArrowLeftIcon } from "../../Icons/ArrowLeftIcon";
 import { ArrowRightIcon } from "../../Icons/ArrowRightIcon";
