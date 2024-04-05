@@ -1,8 +1,8 @@
-import React from "react";
-import { Svg, Path } from "react-native-svg";
-import { iconBase } from "../components/Icon/Icon";
+import React from 'react';
+import { Svg, Path } from 'react-native-svg';
+import { iconBase } from '../components/Icon/Icon';
 
-export function HomeFillIcon({ size = 20, color = "black" }: iconBase) {
+export function HomeFillIcon({ size = 20, color = 'black' }: iconBase) {
   return (
     <Svg width={size} height={size} viewBox="0 0 20 20" fill="none">
       <Path

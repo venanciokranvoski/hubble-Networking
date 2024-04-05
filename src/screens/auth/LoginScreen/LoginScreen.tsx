@@ -9,7 +9,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Alert, View } from 'react-native';
-import { AuthScreenProps } from 'src/routes/navigationTypes';
+import { AuthScreenProps } from '@routes';
 import {
   LoginShemaValidation,
   loginShemaValidation,

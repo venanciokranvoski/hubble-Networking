@@ -1,6 +1,6 @@
 import React from 'react';
 import { Screen, Icon, Text, Button } from '@components';
-import { AuthScreenProps } from 'src/routes/navigationTypes';
+import { AuthScreenProps } from '@routes';
 
 export function SucessScreen({ route }: AuthScreenProps<'SucessScreen'>) {
   function goBackToBegin() {}
