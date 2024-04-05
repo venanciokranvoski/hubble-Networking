@@ -4,40 +4,37 @@ import {
   FormTextInput,
   Screen,
   Text,
-} from "@components";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import React from "react";
-import { useForm } from "react-hook-form";
-import { Alert, View } from "react-native";
-import { RootStackParamlist } from "../../../types/StackNavigatorTypes/StackNavigatorTypes";
+} from '@components';
+import { zodResolver } from '@hookform/resolvers/zod';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { Alert, View } from 'react-native';
+import { AuthScreenProps } from 'src/routes/navigationTypes';
 import {
   LoginShemaValidation,
   loginShemaValidation,
-} from "./loginShemaValidation";
+} from './loginShemaValidation';
 
-type ScreenProps = NativeStackScreenProps<RootStackParamlist, "LoginScreen">;
-
-export function LoginScreen({ navigation }: ScreenProps) {
+export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
   function navigateToSignUpScreen() {
-    navigation.navigate("SignUpScreen");
+    navigation.navigate('SignUpScreen');
   }
 
   function navigateToForgotPasswordScreen() {
-    navigation.navigate("ForgotPasswordScreen");
+    navigation.navigate('ForgotPasswordScreen');
   }
 
   function handleAuthForm({ email, password }: LoginShemaValidation) {
-    Alert.alert("EMAIL:" + email + " SENHA : " + password);
+    Alert.alert('EMAIL:' + email + ' SENHA : ' + password);
   }
 
   const { control, formState, handleSubmit } = useForm<LoginShemaValidation>({
     resolver: zodResolver(loginShemaValidation),
     defaultValues: {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     },
-    mode: "onChange",
+    mode: 'onChange',
   });
 
   return (
@@ -55,7 +52,7 @@ export function LoginScreen({ navigation }: ScreenProps) {
           control={control}
           label="E-mail"
           placeholder="E-mail"
-          boxSetting={{ mb: "s20" }}
+          boxSetting={{ mb: 's20' }}
         />
 
         <FormPasswordInput
@@ -63,7 +60,7 @@ export function LoginScreen({ navigation }: ScreenProps) {
           control={control}
           label="Senha"
           placeholder="Digite sua senha"
-          boxSetting={{ mb: "s20" }}
+          boxSetting={{ mb: 's20' }}
         />
 
         <Text
