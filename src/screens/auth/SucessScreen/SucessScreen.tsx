@@ -1,11 +1,8 @@
-import React from "react";
-import { Screen, Icon, Text, Button } from "@components";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamlist } from "../../../types/StackNavigatorTypes/StackNavigatorTypes";
+import React from 'react';
+import { Screen, Icon, Text, Button } from '@components';
+import { AuthScreenProps } from 'src/routes/navigationTypes';
 
-type ScreenProps = NativeStackScreenProps<RootStackParamlist, "SucessScreen">;
-
-export function SucessScreen({ route }: ScreenProps) {
+export function SucessScreen({ route }: AuthScreenProps<'SucessScreen'>) {
   function goBackToBegin() {}
   return (
     <Screen>
@@ -14,7 +11,7 @@ export function SucessScreen({ route }: ScreenProps) {
         {route.params.title}
       </Text>
       <Text preset="paragraphLarge" marginTop="s16" color="grayBlack">
-        {" "}
+        {' '}
         {route.params.description}
       </Text>
 
