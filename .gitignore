@@ -1,66 +1,257 @@
-# OSX
-#
-.DS_Store
+# Criado por https://www.toptal.com/developers/gitignore/api/reactnative
+# Edite em https://www.toptal.com/developers/gitignore?templates=reactnative
 
-# Xcode
-#
-build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
-ios/.xcode.env.local
+###ReagirNativo###
+# Base de pilha nativa do React
 
-# Android/IntelliJ
-#
-build/
-.idea
-.gradle
-local.properties
-*.iml
-*.hprof
+.expo
+__gerado__
+
+### ReactNative.Buck Pilha ###
+saque/
+.buckconfig.local
+.buckd/
+.buckversion
+.fakebuckversão
+
+### Pilha ReactNative.Android ###
+#Arquivos Gradle
+.gradle/
+construir/
+
+# Arquivo de configuração local (caminho SDK, etc)
+propriedades locais
+
+# Arquivos de log/SO
+*.registro
+
+# Arquivos e pastas gerados pelo Android Studio
+captura/
+.externalNativeBuild/
 .cxx/
+*.apk
+saída.json
+
+#IntelliJ
+*.iml
+.ideia/
+misc.xml
+implantaçãoTargetDropDown.xml
+render.experimental.xml
+
+# Arquivos de armazenamento de chaves
+*.jks
 *.keystore
-!debug.keystore
 
-# node.js
-#
+# Serviços do Google (por exemplo, APIs ou Firebase)
+google-services.json
+
+# Perfil do Android
+*.hprof
+
+### Pilha ReactNative.Gradle ###
+.gradle
+**/construir/
+!src/**/build/
+
+# Ignorar configuração da GUI do Gradle
+gradle-app.setting
+
+# Evite ignorar o arquivo jar do wrapper Gradle (arquivos .jar geralmente são ignorados)
+!gradle-wrapper.jar
+
+# Evite ignorar as propriedades do wrapper do Gradle
+!gradle-wrapper.properties
+
+#Cache do projeto
+.gradletasknamecache
+
+# Arquivos gerados pelo plugin Eclipse Gradle
+# Núcleo Eclipse
+.projeto
+# Específico para JDT (Ferramentas de Desenvolvimento Java Eclipse)
+.classpath
+
+### Pilha ReactNative.Linux ###
+*~
+
+# arquivos temporários que podem ser criados se um processo ainda tiver um identificador aberto de um arquivo excluído
+.fuse_hidden*
+
+# Preferências de diretório do KDE
+.diretório
+
+# Pasta de lixo do Linux que pode aparecer em qualquer partição ou disco
+.Lixo-*
+
+# Arquivos .nfs são criados quando um arquivo aberto é removido, mas ainda está sendo acessado
+.nfs*
+
+### Pilha ReactNative.macOS ###
+# Em geral
+.DS_Store
+.AppleDouble
+.LSOverride
+
+#O ícone deve terminar com dois \r
+Ícone
+
+
+# Miniaturas
+._*
+
+# Arquivos que podem aparecer na raiz de um volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Lixos
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Diretórios potencialmente criados em compartilhamento AFP remoto
+.AppleDB
+.AppleDesktop
+Pasta de lixo da rede
+Itens temporários
+.apdisk
+
+### Pilha ReactNative.Node ###
+# Histórico
+Histórico
+npm-debug.log*
+fio-debug.log*
+fio-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Relatórios de diagnóstico (https://nodejs.org/api/report.html)
+relatório.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Dados de tempo de execução
+pids
+*.pid
+*.semente
+*.pid.lock
+
+# Diretório para bibliotecas instrumentadas geradas por jscoverage/JSCover
+lib-cov
+
+# Diretório de cobertura usado por ferramentas como Istambul
+cobertura
+*.lcov
+
+# cobertura de teste em Nova York
+.nyc_output
+
+# Armazenamento intermediário Grunt (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunhido
+
+# Diretório de dependência do Bower (https://bower.io/)
+componentes_bower
+
+# configuração do nó-waf
+.lock-wscript
+
+# Complementos binários compilados (https://nodejs.org/api/addons.html)
+construir/liberar
+
+#Diretórios de dependência
 node_modules/
-npm-debug.log
-yarn-error.log
+jspm_packages/
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/
+# Diretório de dependência do Snowpack (https://snowpack.dev/)
+módulos_web/
 
-**/fastlane/report.xml
-**/fastlane/Preview.html
-**/fastlane/screenshots
-**/fastlane/test_output
+#Cache TypeScript
+*.tsbuildinfo
 
-# Bundle artifact
-*.jsbundle
+# Diretório de cache npm opcional
+.npm
 
-# Ruby / CocoaPods
-/ios/Pods/
-/vendor/bundle/
+# Cache eslint opcional
+.eslintcache
 
-# Temporary files created by Metro to check the health of the file watcher
-.metro-health-check*
+# Cache stylelint opcional
+.stylelintcache
 
-# testing
-/coverage
+# Cache de micropacote
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Histórico REPL opcional
+.node_repl_history
+
+# Saída do 'pacote npm'
+*.tgz
+
+# Arquivo de integridade do fio
+.integridade do fio
+
+# arquivos de variáveis ​​de ambiente dotenv
+.env
+.env.desenvolvimento.local
+.env.test.local
+.env.produção.local
+.env.local
+
+# cache do pacote empacotado (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Saída de compilação Next.js
+.próximo
+fora
+
+# Nuxt.js constrói/gera saída
+.nuxt
+distância
+
+#Arquivos Gatsby
+.cache/
+# Comente na linha pública se seu projeto usa Gatsby e não Next.js
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# público
+
+# saída de compilação do vuepress
+.vuepress/dist
+
+# vuepress v2.x diretório temporário e de cache
+.temp
+
+# Cache do Docusaurus e arquivos gerados
+.docusaurus
+
+# Diretórios sem servidor
+.sem servidor/
+
+# Cache do FuseBox
+.Caixa de Fusiveis/
+
+#Arquivos locais do DynamoDB
+.dynamodb/
+
+#Arquivo de porta TernJS
+.tern-port
+
+# Armazena versões do VSCode usadas para testar extensões do VSCode
+.vscode-teste
+
+# fio v2
+.yarn/cache
+.yarn/desconectado
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+### Pilha ReactNative.Xcode ###
+## Configurações do Usuário
+xcuserdata/
+
+## Xcode 8 e anteriores
+*.xcscmblueprint
+*.xccheckout
+
+# Fim de https://www.toptal.com/developers/gitignore/api/reactnative
