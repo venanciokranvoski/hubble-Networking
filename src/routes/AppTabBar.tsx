@@ -1,16 +1,28 @@
-import { Box, Icon, Text, TouchableOpacityVenon } from '@components';
+import {
+  Box,
+  BoxProps,
+  Icon,
+  Text,
+  TextProps,
+  TouchableOpacityVenon,
+  TouchableOpacityVenonProps,
+} from '@components';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { mapScreenToProps } from './mapScreenToProps';
 import { AppTabBottomTabParamList } from './AppTabNavigator';
+import { useAppSafeArea } from '@hooks';
+import { $shadowProps } from '@theme';
 
 export function AppTabBar({
   state,
   descriptors,
   navigation,
 }: BottomTabBarProps) {
+  const { bottom } = useAppSafeArea();
+
   return (
-    <Box flexDirection="row">
+    <Box {...$BoxStyles} style={[{ paddingBottom: bottom }, $shadowProps]}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
 
@@ -40,9 +52,8 @@ export function AppTabBar({
 
         return (
           <TouchableOpacityVenon
-            activeOpacity={1}
-            alignItems="center"
-            accessibilityRole="button"
+            key={item.id}
+            {...$itemTouchable}
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
@@ -54,11 +65,7 @@ export function AppTabBar({
               name={isFocused ? item.icon.focused : item.icon.unfocused}
               color={isFocused ? 'primary' : 'gray1'}
             />
-            <Text
-              semiBold
-              preset="paragraphCaption"
-              style={{ color: isFocused ? '#673ab7' : '#222' }}
-            >
+            <Text {...$label} color={isFocused ? 'primary' : 'gray1'}>
               {item.label}
             </Text>
           </TouchableOpacityVenon>
@@ -67,3 +74,21 @@ export function AppTabBar({
     </Box>
   );
 }
+
+const $label: TextProps = {
+  semiBold: true,
+  marginTop: 's4',
+  preset: 'paragraphCaption',
+};
+
+const $itemTouchable: TouchableOpacityVenonProps = {
+  activeOpacity: 1,
+  alignItems: 'center',
+  accessibilityRole: 'button',
+};
+
+const $BoxStyles: BoxProps = {
+  padding: 's12',
+  backgroundColor: 'grayWhite',
+  flexDirection: 'row',
+};

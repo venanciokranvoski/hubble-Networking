@@ -6,6 +6,7 @@ export const mapScreenToProps: Record<
   keyof AppTabBottomTabParamList,
   {
     label: string;
+    id?: number;
     icon: {
       focused: IconProps['name'];
       unfocused: IconProps['name'];
@@ -14,6 +15,7 @@ export const mapScreenToProps: Record<
 > = {
   HomeScreen: {
     label: 'Inicio',
+    id: 1,
     icon: {
       focused: 'homeFill',
       unfocused: 'home',
@@ -21,6 +23,7 @@ export const mapScreenToProps: Record<
   },
   NewPostScreen: {
     label: 'Novo post',
+    id: 2,
     icon: {
       focused: 'newPost',
       unfocused: 'newPost',
@@ -28,6 +31,7 @@ export const mapScreenToProps: Record<
   },
   FavoriteScreen: {
     label: 'Favorito',
+    id: 3,
     icon: {
       focused: 'bookMarkFill',
       unfocused: 'bookMark',
@@ -35,6 +39,7 @@ export const mapScreenToProps: Record<
   },
   MyProfileScreen: {
     label: 'Meu Perfil',
+    id: 4,
     icon: {
       focused: 'profileFill',
       unfocused: 'profile',
