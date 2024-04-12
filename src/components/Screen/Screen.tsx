@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Box,
   TouchableOpacityVenon,
@@ -6,12 +6,13 @@ import {
   Text,
   ScrollViewContainer,
   ViewContainer,
-} from "@components";
-import { useAppSafeArea, useAppTheme } from "@hooks";
-import { KeyboardAvoidingView, Platform } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+  BoxProps,
+} from '@components';
+import { useAppSafeArea, useAppTheme } from '@hooks';
+import { KeyboardAvoidingView, Platform } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-interface ScreenProps {
+interface ScreenProps extends BoxProps {
   children: React.ReactNode;
   canGoBack?: boolean;
   scrollable?: boolean;
@@ -21,6 +22,8 @@ export function Screen({
   children,
   canGoBack = false,
   scrollable = false,
+  style,
+  ...boxProps
 }: ScreenProps) {
   const { top, bottom } = useAppSafeArea();
   const { colors } = useAppTheme();
@@ -28,13 +31,15 @@ export function Screen({
   const navigation = useNavigation();
   return (
     <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : undefined}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       style={{ flex: 1 }}
     >
       <Container backgroundColor={colors.grayWhite}>
         <Box
+          paddingBottom="s24"
           paddingHorizontal="s24"
-          style={{ paddingTop: top, paddingBottom: bottom }}
+          style={[{ paddingTop: top, paddingBottom: bottom }, style]} // Margin style
+          {...boxProps}
         >
           {canGoBack && (
             <TouchableOpacityVenon
