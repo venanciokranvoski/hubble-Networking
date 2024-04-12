@@ -18,10 +18,10 @@ import { CommentIcon } from '../../Icons/CommentIcon';
 import { EyeOnIcon } from '../../Icons/EyeOnIcon';
 import { FlashOffIcon } from '../../Icons/FlashOffIcon';
 import { FlashOnIcon } from '../../Icons/FlashOnIcon';
+import { HeartFill } from '../../Icons/heartFill1';
 import { HeartIcon } from '../../Icons/HeartIcon';
 import { HomeFillIcon } from '../../Icons/HomeFillIcon';
 import { HomeIcon } from '../../Icons/HomeIcon';
-import { HeartFillIcon } from '../../Icons/HeartFillIcon';
 import { MessageIcon } from '../../Icons/MessageIcon';
 import { NewPostIcon } from '../../Icons/NewPostIcon';
 import { ProfileFillIcon } from '../../Icons/ProfileFillIcon';
@@ -91,7 +91,7 @@ const IconRegister = {
   flashOF: FlashOffIcon,
   flashON: FlashOnIcon,
   heart: HeartIcon,
-  heartFill: HeartFillIcon,
+  heartFill: HeartFill,
   home: HomeIcon,
   homeFill: HomeFillIcon,
   message: MessageIcon,

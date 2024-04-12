@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: '@react-native-community',
+  extends: ['airbnb-base', 'prettier'],
   rules: { 'react-native/no-inline-styles': 'off' },
   plugins: ['import'],
   overrides: [

@@ -9,3 +9,6 @@ export * from './Screen/Screen';
 export * from './ScrollView/ScrolllView';
 export * from './Text/Text';
 export * from './TextInput/TextInput';
+
+export * from './PostItem/PostItem';
+export * from './PostItem/components/Header/PostHeader';
