@@ -8,12 +8,25 @@ import {
   StyleProp,
   ViewStyle,
 } from 'react-native';
+import HomeHeader from './Components/HomeHeader';
 
 export function HomeScreen({ navigation }: AppTabScreenProps<'HomeScreen'>) {
   const [postListMain, setPostListMain] = useState<Post[]>([]);
+  const [error, setError] = useState<Error | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  async function fetchData() {
+    try {
+      setLoading(true);
+      const list = await postService.getList();
+      setPostListMain(list);
+    } catch (error) {
+      console.log('ERROR', error);
+    }
+  }
 
   useEffect(() => {
-    postService.getList().then((list) => setPostListMain(list));
+    fetchData();
   });
 
   function renderItem({ item }: ListRenderItemInfo<Post>) {
@@ -27,6 +40,7 @@ export function HomeScreen({ navigation }: AppTabScreenProps<'HomeScreen'>) {
         data={postListMain}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
+        ListHeaderComponent={<HomeHeader />}
       />
     </Screen>
   );

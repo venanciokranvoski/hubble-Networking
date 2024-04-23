@@ -1,10 +1,9 @@
-import { postListMock } from './postListMock';
-import { Post } from './types';
+import { apiConfig, PageApi } from '@api';
+import { PostAPI } from './postTypes';
 
-async function getList(): Promise<Post[]> {
-  // Todo simulator and delay in API
-  await new Promise((resolve) => setTimeout(() => resolve(''), 1000));
-  return postListMock;
+async function getList(): Promise<PageApi<PostAPI>> {
+  const response = await apiConfig.get<PageApi<PostAPI>>('user/post');
+  return response.data;
 }
 
 export const postApi = {

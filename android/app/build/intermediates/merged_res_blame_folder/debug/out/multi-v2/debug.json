@@ -6416,7 +6416,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Venancio\\Documents\\St\\Net-Devs\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\Venancio\\Documents\\St\\RN\\Project-Study\\Net-Devs\\android\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -6490,23 +6490,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Venancio\\Documents\\St\\Net-Devs\\android\\app\\build\\generated\\res\\resValues\\debug\\values\\gradleResValues.xml",
-                    "from": {
-                        "startLines": "6,8",
-                        "startColumns": "4,4",
-                        "startOffsets": "159,265",
-                        "endColumns": "63,68",
-                        "endOffsets": "218,329"
-                    },
-                    "to": {
-                        "startLines": "1848,1849",
-                        "startColumns": "4,4",
-                        "startOffsets": "123259,123323",
-                        "endColumns": "63,68",
-                        "endOffsets": "123318,123387"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Venancio\\.gradle\\caches\\transforms-3\\aa8b400e3fa62f6a4287be6e71a3821f\\transformed\\lifecycle-viewmodel-2.5.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -6521,25 +6504,6 @@
                         "startOffsets": "118809",
                         "endColumns": "49",
                         "endOffsets": "118854"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Venancio\\Documents\\St\\Net-Devs\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "267"
-                    },
-                    "to": {
-                        "startLines": "2106",
-                        "startColumns": "4",
-                        "startOffsets": "154319",
-                        "endLines": "2109",
-                        "endColumns": "12",
-                        "endOffsets": "154497"
                     }
                 },
                 {
@@ -6674,6 +6638,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Venancio\\Documents\\St\\RN\\Project-Study\\Net-Devs\\android\\app\\build\\generated\\res\\resValues\\debug\\values\\gradleResValues.xml",
+                    "from": {
+                        "startLines": "6,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "159,265",
+                        "endColumns": "63,68",
+                        "endOffsets": "218,329"
+                    },
+                    "to": {
+                        "startLines": "1848,1849",
+                        "startColumns": "4,4",
+                        "startOffsets": "123259,123323",
+                        "endColumns": "63,68",
+                        "endOffsets": "123318,123387"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Venancio\\.gradle\\caches\\transforms-3\\9b2c28bd5719adb7e465469e2ca76c12\\transformed\\jetified-flipper-0.201.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -6796,6 +6777,25 @@
                         "startOffsets": "118652",
                         "endColumns": "42",
                         "endOffsets": "118690"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Venancio\\Documents\\St\\RN\\Project-Study\\Net-Devs\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "54",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "267"
+                    },
+                    "to": {
+                        "startLines": "2106",
+                        "startColumns": "4",
+                        "startOffsets": "154319",
+                        "endLines": "2109",
+                        "endColumns": "12",
+                        "endOffsets": "154497"
                     }
                 },
                 {
