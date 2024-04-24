@@ -1,33 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import { PostItem, Screen } from '@components';
 import { AppTabScreenProps } from '@routes';
-import { Post, postService } from '@domain';
+import { Post, usePostList } from '@domain';
 import {
   FlatList,
   ListRenderItemInfo,
+  RefreshControl,
   StyleProp,
   ViewStyle,
 } from 'react-native';
 import HomeHeader from './Components/HomeHeader';
+import { HomeEmpty } from './Components/HomeExpty';
+import { useScrollToTop } from '@react-navigation/native';
 
 export function HomeScreen({ navigation }: AppTabScreenProps<'HomeScreen'>) {
-  const [postListMain, setPostListMain] = useState<Post[]>([]);
-  const [error, setError] = useState<Error | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { error, loading, postListMain, refetch, NextPage } = usePostList();
 
-  async function fetchData() {
-    try {
-      setLoading(true);
-      const list = await postService.getList();
-      setPostListMain(list);
-    } catch (error) {
-      console.log('ERROR', error);
-    }
-  }
-
-  useEffect(() => {
-    fetchData();
-  });
+  // reference FlatList handle FlatList in TOP
+  const FlatListRef = useRef<FlatList<Post>>(null);
+  useScrollToTop(FlatListRef);
+  // =========
 
   function renderItem({ item }: ListRenderItemInfo<Post>) {
     return <PostItem post={item} />;
@@ -36,11 +28,25 @@ export function HomeScreen({ navigation }: AppTabScreenProps<'HomeScreen'>) {
   return (
     <Screen style={$screen}>
       <FlatList
+        ref={FlatListRef}
         showsVerticalScrollIndicator={false}
         data={postListMain}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
+        refreshing={loading}
+        refreshControl={
+          <RefreshControl refreshing={loading} onRefresh={refetch} />
+        }
+        onEndReached={NextPage} // execute function or here end list
+        onEndReachedThreshold={0.1}
+        contentContainerStyle={{
+          flexGrow: 1,
+          flex: postListMain.length === 0 ? 1 : undefined,
+        }} // here options is for scrool it works
         ListHeaderComponent={<HomeHeader />}
+        ListEmptyComponent={
+          <HomeEmpty refetch={refetch} loading={loading} error={error} />
+        }
       />
     </Screen>
   );
@@ -50,4 +56,5 @@ const $screen: StyleProp<ViewStyle> = {
   paddingBottom: 0,
   paddingHorizontal: 0,
   paddingTop: 0,
+  flex: 1,
 };

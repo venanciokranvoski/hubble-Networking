@@ -1,8 +1,10 @@
-import { apiConfig, PageApi } from '@api';
+import { apiConfig, PageApi, PageParams } from '@api';
 import { PostAPI } from './postTypes';
 
-async function getList(): Promise<PageApi<PostAPI>> {
-  const response = await apiConfig.get<PageApi<PostAPI>>('user/post');
+async function getList(params: PageParams): Promise<PageApi<PostAPI>> {
+  const response = await apiConfig.get<PageApi<PostAPI>>('user/post', {
+    params,
+  });
   return response.data;
 }
 
