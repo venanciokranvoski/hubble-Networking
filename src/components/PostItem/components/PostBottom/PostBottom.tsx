@@ -7,9 +7,19 @@ import {
   TouchableOpacityVenon,
 } from '@components';
 import { Post } from '@domain';
+import { useNavigation } from '@react-navigation/native';
 
-type PropsComented = Pick<Post, 'author' | 'commentCount' | 'text'>;
-export function PostBottom({ author, commentCount, text }: PropsComented) {
+type PropsComented = Pick<Post, 'author' | 'commentCount' | 'text' | 'id'>;
+export function PostBottom({ author, commentCount, text, id }: PropsComented) {
+  const navigation = useNavigation();
+
+  // function to navigation Screen commented
+  function navigateToPostScreenCommented() {
+    navigation.navigate('PostCommentedScreen', {
+      postID: id,
+    });
+  }
+
   const comentaryUser = GetComentedText(commentCount);
   return (
     <Box mt="s16">
@@ -21,7 +31,13 @@ export function PostBottom({ author, commentCount, text }: PropsComented) {
       </TextComentedUser>
       {comentaryUser && (
         <TouchableOpacityVenon>
-          <TxtComented mt="s8" color="primary" bold preset="paragraphSmall">
+          <TxtComented
+            onPress={navigateToPostScreenCommented}
+            mt="s8"
+            color="primary"
+            bold
+            preset="paragraphSmall"
+          >
             ver {commentCount} comentarios
           </TxtComented>
         </TouchableOpacityVenon>
