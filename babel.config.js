@@ -15,6 +15,7 @@ module.exports = {
           '@brand': './src/brand',
           '@api': './src/API',
           '@types': './src/types',
+          '@post': './src/domain/Post/PostComment',
         },
       },
     ],

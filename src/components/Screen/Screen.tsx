@@ -1,18 +1,10 @@
 import React from 'react';
-import {
-  Box,
-  TouchableOpacityVenon,
-  Icon,
-  Text,
-  ScrollViewContainer,
-  ViewContainer,
-  BoxProps,
-} from '@components';
+import { Box, ScrollViewContainer, ViewContainer, BoxProps } from '@components';
 import { useAppSafeArea, useAppTheme } from '@hooks';
 import { KeyboardAvoidingView, Platform } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { ScreenComponent } from './components/ScreenComtainer';
 
-interface ScreenProps extends BoxProps {
+export interface ScreenProps extends BoxProps {
   children: React.ReactNode;
   canGoBack?: boolean;
   scrollable?: boolean;
@@ -24,12 +16,12 @@ export function Screen({
   canGoBack = false,
   scrollable = false,
   style,
+  title,
   ...boxProps
 }: ScreenProps) {
   const { top, bottom } = useAppSafeArea();
   const { colors } = useAppTheme();
   const Container = scrollable ? ScrollViewContainer : ViewContainer;
-  const navigation = useNavigation();
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
@@ -42,22 +34,7 @@ export function Screen({
           style={[{ paddingTop: top, paddingBottom: bottom }, style]} // Margin style
           {...boxProps}
         >
-          {canGoBack && (
-            <TouchableOpacityVenon
-              flexDirection="row"
-              marginBottom="s24"
-              alignItems="center"
-            >
-              <Icon
-                name="arrowLeftIcon"
-                color="primary"
-                onPress={navigation.goBack}
-              />
-              <Text preset="paragraphMedium" semiBold ml="s10">
-                Voltar
-              </Text>
-            </TouchableOpacityVenon>
-          )}
+          {canGoBack && <ScreenComponent canGoBack={canGoBack} title={title} />}
           {children}
         </Box>
       </Container>

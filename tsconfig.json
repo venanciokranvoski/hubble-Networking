@@ -11,7 +11,8 @@
       "@domain": ["src/domain"],
       "@brand": ["src/brand"],
       "@api": ["src/API"],
-      "@types": ["src/types"]
+      "@types": ["src/types"],
+      "@post": ["./src/domain/Post/PostComment"]
     }
   }
 }
