@@ -19,6 +19,8 @@ import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
 // react-native-svg
 import com.horcrux.svg.SvgPackage;
+// react-native-device-info
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
 
 public class PackageList {
   private Application application;
@@ -67,7 +69,8 @@ public class PackageList {
       new AsyncStoragePackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
-      new SvgPackage()
+      new SvgPackage(),
+      new RNDeviceInfo()
     ));
   }
 }

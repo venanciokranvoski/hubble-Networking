@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.nubbleapp-mergeDebugResources-34:/values-v25/values-v25.xml",
+            "outputFile": "com.nubbleapp-mergeDebugResources-36:/values-v25/values-v25.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Venancio\\.gradle\\caches\\transforms-3\\b3627ca143232ec2ceb6e319eb18971d\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",
