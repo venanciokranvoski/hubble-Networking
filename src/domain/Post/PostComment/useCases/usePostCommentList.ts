@@ -1,3 +1,7 @@
+// +++++
+// The access in API between of use Cases !
+// ++++++
+
 import { usePaginatedList } from '@domain';
 import { postCommentService } from '../postCommentService';
 

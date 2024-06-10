@@ -17,11 +17,22 @@ async function getList(
       },
     }
   );
-  fetchPost.stop('response .....');
 
+  return response.data;
+}
+
+async function create(
+  post_id: number,
+  message: string
+): Promise<PostCommentedAPI> {
+  const response = await apiConfig.post<PostCommentedAPI>('user/post_comment', {
+    post_id,
+    message,
+  });
   return response.data;
 }
 
 export const postCommentedApi = {
   getList,
+  create,
 };

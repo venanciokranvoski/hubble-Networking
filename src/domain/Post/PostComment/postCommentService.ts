@@ -1,10 +1,13 @@
+// ++++ Service layer
+// Do it separation of API with layer of service
+// ++++
 import { Page } from '@types';
 import { PostComment } from './postCommentTypes';
 import { apiAdapter } from '@api';
 import { postCommentedApi } from './postCommentApi';
 import { postCommentAdapter } from './postCommentedAdpter';
 
-const Per_Page = 5;
+const Per_Page = 10;
 async function getList(
   postId: number,
   page: number
@@ -20,6 +23,13 @@ async function getList(
   };
 }
 
+async function create(postId: number, message: string): Promise<PostComment> {
+  const postCommentAPI = await postCommentedApi.create(postId, message);
+
+  return postCommentAdapter.toPostComment(postCommentAPI);
+}
+
 export const postCommentService = {
   getList,
+  create,
 };

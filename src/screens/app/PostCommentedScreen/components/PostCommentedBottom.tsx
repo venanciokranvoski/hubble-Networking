@@ -8,13 +8,14 @@ interface Props {
 }
 
 export function PostCommentedBottom({ nextPage, hasNextPage }: Props) {
-  return (
-    <Pressable onPress={nextPage}>
-      {hasNextPage ? (
+  if (hasNextPage) {
+    return (
+      <Pressable onPress={nextPage} style={{ marginBottom: 35 }}>
         <Text bold textAlign="center" color="primary">
           Ver mais
         </Text>
-      ) : null}
-    </Pressable>
-  );
+      </Pressable>
+    );
+  }
+  return null;
 }

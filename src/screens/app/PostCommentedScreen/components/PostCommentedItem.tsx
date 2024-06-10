@@ -8,9 +8,14 @@ interface Props {
 
 export function PostCommentedItem({ postCommented }: Props) {
   return (
-    <Box flexDirection="row" alignItems="center">
+    <Box
+      paddingHorizontal="s24"
+      flexDirection="row"
+      alignItems="center"
+      marginBottom="s16"
+    >
       <ProfileAvatar imageURL={postCommented.author.profileURL} />
-      <Box marginLeft="s12" mb="s16" flex={1}>
+      <Box marginLeft="s12" flex={1}>
         <Text preset="paragraphSmall" color="grayBlack" bold>
           {postCommented.author.userName}
         </Text>
