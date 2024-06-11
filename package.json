@@ -10,7 +10,8 @@
     "test": "jest",
     "prepare": "husky install",
     "device": "adb reverse tcp:3333 tcp:3333",
-    "c": "npm start -- --reset-cache"
+    "c": "npm start -- --reset-cache",
+    "git": "--no-verify"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",

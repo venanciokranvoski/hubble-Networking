@@ -21,18 +21,29 @@ async function getList(
   return response.data;
 }
 
+const PATH = 'user/post_comment';
+
 async function create(
   post_id: number,
   message: string
 ): Promise<PostCommentedAPI> {
-  const response = await apiConfig.post<PostCommentedAPI>('user/post_comment', {
+  const response = await apiConfig.post<PostCommentedAPI>(PATH, {
     post_id,
     message,
   });
   return response.data;
 }
 
+async function remove(postComentedID: number): Promise<{ message: string }> {
+  const response = await apiConfig.delete<{ message: string }>(
+    `PATH/${postComentedID}`
+  );
+
+  return response.data;
+}
+
 export const postCommentedApi = {
   getList,
   create,
+  remove,
 };
