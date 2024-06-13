@@ -1,6 +1,7 @@
 import { SimpleLogo } from '@brand';
 import { Box, BoxProps, Icon } from '@components';
 import { useAppSafeArea } from '@hooks';
+
 import React from 'react';
 
 function HomeHeader() {

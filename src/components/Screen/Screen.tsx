@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, ScrollViewContainer, ViewContainer, BoxProps } from '@components';
-import { useAppSafeArea, useAppTheme } from '@hooks';
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import { ScreenComponent } from './components/ScreenComtainer';
+import { useAppSafeArea, useAppTheme } from '@hooks';
 
 export interface ScreenProps extends BoxProps {
   children: React.ReactNode;
@@ -25,8 +25,7 @@ export function Screen({
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-      style={{ flex: 1 }}
-    >
+      style={{ flex: 1 }}>
       <Container backgroundColor={colors.grayWhite}>
         <Box
           paddingBottom="s24"

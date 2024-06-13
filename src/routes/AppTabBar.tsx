@@ -11,8 +11,8 @@ import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { mapScreenToProps } from './mapScreenToProps';
 import { AppTabBottomTabParamList } from './AppTabNavigator';
-import { useAppSafeArea } from '@hooks';
 import { $shadowProps } from '@theme';
+import { useAppSafeArea } from '@hooks';
 
 export function AppTabBar({
   state,

@@ -1,8 +1,7 @@
 // +++++
 // The access in API between of use Cases !
 // ++++++
-
-import { usePaginatedList } from '@domain';
+import { usePaginatedList } from '@infra';
 import { postCommentService } from '../postCommentService';
 
 export function usePostCommentList(postId: number) {

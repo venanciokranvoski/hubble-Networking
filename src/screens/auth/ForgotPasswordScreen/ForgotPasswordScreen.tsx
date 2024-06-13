@@ -5,8 +5,9 @@ import {
   ForgotShemaValidation,
   forgotShemaValidation,
 } from "./forgotShemaValidation";
-import { useResetNavigationSucess } from "@hooks";
+
 import { Screen, Text, Button, FormTextInput } from "@components";
+import { useResetNavigationSucess } from "@hooks";
 
 export function ForgotPasswordScreen() {
   const { reset } = useResetNavigationSucess();

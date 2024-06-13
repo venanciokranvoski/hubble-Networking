@@ -6,7 +6,7 @@ import {
   FormTextInput,
   FormPasswordInput,
 } from '@components';
-import { useResetNavigationSucess as useResetNavigationSuccess } from '@hooks';
+
 import { useForm } from 'react-hook-form';
 import { signUpSchemaValidation, SignUpSchema } from './signUpSchemaValidation';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -77,3 +77,7 @@ export function SignUpScreen() {
     </Screen>
   );
 }
+function useResetNavigationSuccess(): { reset: any; } {
+  throw new Error('Function not implemented.');
+}
+

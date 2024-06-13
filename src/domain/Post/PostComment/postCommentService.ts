@@ -37,4 +37,5 @@ async function remove(postComentedID: number): Promise<string> {
 export const postCommentService = {
   getList,
   create,
+  remove
 };

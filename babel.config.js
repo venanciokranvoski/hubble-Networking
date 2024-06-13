@@ -17,6 +17,7 @@ module.exports = {
           '@types': './src/types',
           '@post': './src/domain/Post/PostComment',
           '@utils': './src/utils',
+          '@infra': './src/infra'
         },
       },
     ],

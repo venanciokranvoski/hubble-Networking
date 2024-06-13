@@ -4,7 +4,7 @@
             "outputFile": "com.nubbleapp-mergeDebugResources-36:/values-ku/values-ku.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Venancio\\.gradle\\caches\\transforms-3\\d10d040f6dc36d35e250d48d5ebb15bd\\transformed\\jetified-react-android-0.73.2-debug\\res\\values-ku\\values-ku.xml",
+                    "source": "C:\\Users\\p-valves\\.gradle\\caches\\transforms-3\\d10d040f6dc36d35e250d48d5ebb15bd\\transformed\\jetified-react-android-0.73.2-debug\\res\\values-ku\\values-ku.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

@@ -10,13 +10,14 @@ import {
 } from './components';
 import { useAppSafeArea } from '@hooks';
 
+
 export function PostCommentScreen({
   route,
 }: AppScreenProps<'PostCommentedScreen'>) {
   // const postID = route.params.postId;
 
   const postID = route.params.postID;
-  const { list, NextPage, hasNextPage } = usePostCommentList(postID);
+  const { list, NextPage, hasNextPage, refetch } = usePostCommentList(postID);
   const { bottom } = useAppSafeArea();
 
   function renderItem({ item }: ListRenderItemInfo<PostComment>) {
@@ -38,7 +39,7 @@ export function PostCommentScreen({
             />
           }
         />
-        <PostCommentTextMessage postID={postID} />
+        <PostCommentTextMessage onAddComment={refetch} postID={postID} />
       </Box>
     </Screen>
   );
