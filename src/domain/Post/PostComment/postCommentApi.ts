@@ -36,7 +36,7 @@ async function create(
 
 async function remove(postComentedID: number): Promise<{ message: string }> {
   const response = await apiConfig.delete<{ message: string }>(
-    `PATH/${postComentedID}`
+    `${PATH}/${postComentedID}`
   );
 
   return response.data;

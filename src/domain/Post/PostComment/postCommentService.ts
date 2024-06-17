@@ -23,19 +23,41 @@ async function getList(
   };
 }
 
+// create commented
 async function create(postId: number, message: string): Promise<PostComment> {
   const postCommentAPI = await postCommentedApi.create(postId, message);
 
   return postCommentAdapter.toPostComment(postCommentAPI);
 }
-
+// remove
 async function remove(postComentedID: number): Promise<string> {
   const response = await postCommentedApi.remove(postComentedID);
   return response.message;
 }
 
+/**
+ * @description user can delete the commented if it is the post author or comemented
+ *
+ * @param userId the current session user id
+ * @param postComment comment to be deleted
+ * @param postAuthorID the id the post author
+ */
+
+function isAllowToDelete(
+  postcommented: PostComment,
+  userId: number,
+  postAuthorID: number
+): boolean {
+  if (postcommented.author.id === userId) return true;
+
+  if (postAuthorID === userId) return true;
+
+  return false;
+}
+
 export const postCommentService = {
   getList,
   create,
-  remove
+  remove,
+  isAllowToDelete,
 };

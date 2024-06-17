@@ -4,7 +4,7 @@
             "outputFile": "com.nubbleapp-mergeDebugResources-36:/values-zh-rHK/values-zh-rHK.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\p-valves\\.gradle\\caches\\transforms-3\\d3a8a24834f295d8078f18b8298041f7\\transformed\\material-1.9.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "source": "C:\\Users\\Venancio\\.gradle\\caches\\transforms-3\\d3a8a24834f295d8078f18b8298041f7\\transformed\\material-1.9.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,24 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\p-valves\\.gradle\\caches\\transforms-3\\13659b94c66de92d98d7f8af61234b95\\transformed\\core-1.9.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "137",
-                        "startColumns": "4",
-                        "startOffsets": "11195",
-                        "endColumns": "100",
-                        "endOffsets": "11291"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\p-valves\\.gradle\\caches\\transforms-3\\d10d040f6dc36d35e250d48d5ebb15bd\\transformed\\jetified-react-android-0.73.2-debug\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "source": "C:\\Users\\Venancio\\.gradle\\caches\\transforms-3\\d10d040f6dc36d35e250d48d5ebb15bd\\transformed\\jetified-react-android-0.73.2-debug\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,24 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\p-valves\\.gradle\\caches\\transforms-3\\f4982a588457462187a3ce8badf7ea0f\\transformed\\jetified-play-services-basement-17.0.0\\res\\values-zh-rHK\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "166",
-                        "endOffsets": "417"
-                    },
-                    "to": {
-                        "startLines": "53",
-                        "startColumns": "4",
-                        "startOffsets": "4804",
-                        "endColumns": "166",
-                        "endOffsets": "4966"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\p-valves\\.gradle\\caches\\transforms-3\\e853fdf1e0156c040588ca88cd821bd9\\transformed\\jetified-play-services-base-17.0.0\\res\\values-zh-rHK\\values.xml",
+                    "source": "C:\\Users\\Venancio\\.gradle\\caches\\transforms-3\\e853fdf1e0156c040588ca88cd821bd9\\transformed\\jetified-play-services-base-17.0.0\\res\\values-zh-rHK\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -91,7 +57,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\p-valves\\.gradle\\caches\\transforms-3\\b3627ca143232ec2ceb6e319eb18971d\\transformed\\appcompat-1.6.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "source": "C:\\Users\\Venancio\\.gradle\\caches\\transforms-3\\13659b94c66de92d98d7f8af61234b95\\transformed\\core-1.9.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "137",
+                        "startColumns": "4",
+                        "startOffsets": "11195",
+                        "endColumns": "100",
+                        "endOffsets": "11291"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Venancio\\.gradle\\caches\\transforms-3\\f4982a588457462187a3ce8badf7ea0f\\transformed\\jetified-play-services-basement-17.0.0\\res\\values-zh-rHK\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "166",
+                        "endOffsets": "417"
+                    },
+                    "to": {
+                        "startLines": "53",
+                        "startColumns": "4",
+                        "startOffsets": "4804",
+                        "endColumns": "166",
+                        "endOffsets": "4966"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Venancio\\.gradle\\caches\\transforms-3\\b3627ca143232ec2ceb6e319eb18971d\\transformed\\appcompat-1.6.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

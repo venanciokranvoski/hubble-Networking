@@ -17,6 +17,7 @@ export function PostBottom({ author, commentCount, text, id }: PropsComented) {
   function navigateToPostScreenCommented() {
     navigation.navigate('PostCommentedScreen', {
       postID: Number(id),
+      postAuthorId: author.id,
     });
   }
 

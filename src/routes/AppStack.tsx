@@ -9,6 +9,7 @@ export type AppStackParamList = {
   SettingsScreen: undefined;
   PostCommentedScreen: {
     postID: number;
+    postAuthorId: number;
   };
 };
 

@@ -9,7 +9,7 @@ import {
   PostCommentTextMessage,
 } from './components';
 import { useAppSafeArea } from '@hooks';
-
+import { useUser } from '@domain';
 
 export function PostCommentScreen({
   route,
@@ -18,10 +18,20 @@ export function PostCommentScreen({
 
   const postID = route.params.postID;
   const { list, NextPage, hasNextPage, refetch } = usePostCommentList(postID);
+
+  const { id } = useUser();
+
   const { bottom } = useAppSafeArea();
 
   function renderItem({ item }: ListRenderItemInfo<PostComment>) {
-    return <PostCommentedItem postCommented={item} />;
+    return (
+      <PostCommentedItem
+        postCommented={item}
+        onRemoveCommented={refetch}
+        userId={id}
+        postAuthorID={id}
+      />
+    );
   }
 
   return (
