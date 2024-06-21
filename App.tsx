@@ -5,6 +5,7 @@ import { theme } from './src/theme/theme';
 import { Router } from '@routes';
 import { Toast } from '@components';
 import reactotron from './src/config/Reactotron';
+import { ToastProvider } from '@services';
 
 if (__DEV__) reactotron.connect();
 
@@ -12,8 +13,10 @@ function App(): JSX.Element {
   return (
     <SafeAreaProvider>
       <ThemeProvider theme={theme}>
-        <Router />
-        <Toast />
+        <ToastProvider>
+          <Router />
+          <Toast />
+        </ToastProvider>
       </ThemeProvider>
     </SafeAreaProvider>
   );

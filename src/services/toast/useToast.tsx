@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 interface Toast {
   message: string;
-  type: 'sucess' | 'error';
+  type: 'success' | 'error';
   duration: number;
   action: {
     title: string;
@@ -11,25 +11,40 @@ interface Toast {
 }
 
 interface ToastService {
-  toast: Toast;
+  toast: Toast | null;
   showToast: (toast: Toast) => void;
   hiddenToast: () => void;
 }
 
+const ToastContext = createContext<ToastService>({
+  toast: null,
+  showToast: () => {},
+  hiddenToast: () => {},
+});
+
+const [toast, setToast] = useState<ToastService['toast']>(null);
+
+function showToast(_toast: Toast) {
+  setToast(_toast);
+}
+
+function hiddenToast() {
+  setToast(null);
+}
+
+export function ToastProvider({ children }: React.PropsWithChildren<{}>) {
+  return (
+    <ToastContext.Provider value={{ toast, showToast, hiddenToast }}>
+      {children}
+    </ToastContext.Provider>
+  );
+}
+
 export function useToast(): ToastService {
-  const [toast, setToast] = useState<ToastService['toast']>(null);
-
-  function showTest(_toast: Toast) {
-    setToast(_toast);
-  }
-
-  function hiddenToast() {
-    setToast(null);
-  }
-
+  const { toast, hiddenToast, showToast } = useContext(ToastContext);
   return {
     toast,
-    showToast,
     hiddenToast,
+    showToast,
   };
 }

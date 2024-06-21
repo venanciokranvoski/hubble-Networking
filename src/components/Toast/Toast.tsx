@@ -4,13 +4,15 @@ import { Text } from '../Text/Text';
 import { Icon } from '@components';
 import { $shadowProps } from '@theme';
 import { Dimensions } from 'react-native';
+import { useToast } from '@services';
 
 export function Toast() {
+  const { toast } = useToast();
   return (
     <Box top={100} {...$BoxStyle}>
       <Icon name="CheckRoundIcon" size={20} color="sucess" />
       <Text style={{ flexShrink: 1 }} ml="s16" preset="paragraphMedium" bold>
-        dsdsdssdsdsdsdsdsdsd
+        {toast?.message}
       </Text>
     </Box>
   );
