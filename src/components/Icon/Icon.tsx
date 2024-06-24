@@ -31,6 +31,7 @@ import { SettingsIcon } from '../../Icons/SettingsIcon';
 import { TrashIcon } from '../../Icons/TrashIcon';
 import { CheckRoundIcon } from '../../Icons/CheckroundIcon';
 import { MessageRoundIcon } from '../../Icons/MessageRound';
+import { ErrorIcon } from '../../Icons/ErrorIcon';
 
 export interface iconBase {
   size?: number;
@@ -103,6 +104,7 @@ const IconRegister = {
   trash: TrashIcon,
   CheckRoundIcon: CheckRoundIcon,
   MessageRoundIcon: MessageRoundIcon,
+  ErrorIcon: ErrorIcon,
 };
 
 type IconType = typeof IconRegister;

@@ -12,9 +12,9 @@ export function PostCommentTextMessage({ postID, onAddComment }: Props) {
   const [message, setMessage] = useState('');
   const { createCommented } = usePostCommentCreate(postID, {
     onSuccess: () => {
-      setMessage('');
       Keyboard.dismiss();
       onAddComment();
+      setMessage('');
     },
   });
 

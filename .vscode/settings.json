@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["Satoshi", "Venancio"],
+  "cSpell.words": ["Satoshi", "tanstack", "Venancio"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   }

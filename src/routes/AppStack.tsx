@@ -1,6 +1,6 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { PostCommentScreen, SettingsScreen } from '@screens';
+import { PostCommentScreen, SettingsScreen, MyProfileScreen } from '@screens';
 import { AppTabBottomTabParamList, AppTabNavigator } from './AppTabNavigator';
 import { NavigatorScreenParams } from '@react-navigation/native';
 
@@ -10,6 +10,9 @@ export type AppStackParamList = {
   PostCommentedScreen: {
     postID: number;
     postAuthorId: number;
+  };
+  MyProfileScreen: {
+    userId: number;
   };
 };
 
@@ -27,6 +30,7 @@ export function AppStack() {
       <Stack.Screen name="AppTabNavigator" component={AppTabNavigator} />
       <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
       <Stack.Screen name="PostCommentedScreen" component={PostCommentScreen} />
+      <Stack.Screen name="MyProfileScreen" component={MyProfileScreen} />
     </Stack.Navigator>
   );
-}
+} /// criar tela

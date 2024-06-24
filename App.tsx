@@ -6,19 +6,23 @@ import { Router } from '@routes';
 import { Toast } from '@components';
 import reactotron from './src/config/Reactotron';
 import { ToastProvider } from '@services';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 if (__DEV__) reactotron.connect();
+const queryClientVenon = new QueryClient();
 
 function App(): JSX.Element {
   return (
-    <SafeAreaProvider>
-      <ThemeProvider theme={theme}>
-        <ToastProvider>
-          <Router />
-          <Toast />
-        </ToastProvider>
-      </ThemeProvider>
-    </SafeAreaProvider>
+    <QueryClientProvider client={queryClientVenon}>
+      <SafeAreaProvider>
+        <ThemeProvider theme={theme}>
+          <ToastProvider>
+            <Router />
+            <Toast />
+          </ToastProvider>
+        </ThemeProvider>
+      </SafeAreaProvider>
+    </QueryClientProvider>
   );
 }
 export default App;
