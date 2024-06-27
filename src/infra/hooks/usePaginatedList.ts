@@ -1,11 +1,21 @@
 // list paginatedList generics
 import { Page } from '@types';
 import { useEffect, useState } from 'react';
+
+interface getUsePaginatedList<TData> {
+  list: TData[];
+  isError: boolean | null;
+  isLoading: boolean;
+  refresh: () => void;
+  fetchNextPage: () => void;
+  hasNextPage: boolean; // has next page ?
+}
+
 // I´m defined a function inside in other function!
-export function usePaginatedList<T>(
-  getList: (page: number) => Promise<Page<T>>
-) {
-  const [list, setList] = useState<T[]>([]);
+export function usePaginatedList<Data>(
+  getList: (page: number) => Promise<Page<Data>>
+): getUsePaginatedList<Data> {
+  const [list, setList] = useState<Data[]>([]);
   const [error, setError] = useState<boolean | null>(null);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
@@ -52,8 +62,8 @@ export function usePaginatedList<T>(
 
   return {
     list,
-    error,
-    loading,
+    isError: error,
+    isLoading: loading,
     refetch: fetchInitialData,
     NextPage,
     hasNextPage,
