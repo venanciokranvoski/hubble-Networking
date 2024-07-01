@@ -13,8 +13,14 @@ import HomeHeader from './Components/HomeHeader';
 import { HomeEmpty } from './Components/HomeExpty';
 import { useScrollToTop } from '@react-navigation/native';
 
-export function HomeScreen({ navigation }: AppTabScreenProps<'HomeScreen'>) {
-  const { error, loading, list: dataList, refetch, NextPage } = usePostList();
+export function HomeScreen({}: AppTabScreenProps<'HomeScreen'>) {
+  const {
+    list: postList,
+    isError,
+    isLoading,
+    refresh,
+    fetchNextPage,
+  } = usePostList();
 
   // reference FlatList handle FlatList in TOP
   const FlatListRef = useRef<FlatList<Post>>(null);
@@ -30,22 +36,22 @@ export function HomeScreen({ navigation }: AppTabScreenProps<'HomeScreen'>) {
       <FlatList
         ref={FlatListRef}
         showsVerticalScrollIndicator={false}
-        data={dataList}
-        keyExtractor={(item) => Number(item.id)}
+        data={postList}
+        keyExtractor={(item) => item.id.toString()}
         renderItem={renderItem}
-        refreshing={loading}
+        refreshing={isLoading}
         refreshControl={
-          <RefreshControl refreshing={loading} onRefresh={refetch} />
+          <RefreshControl refreshing={isLoading} onRefresh={refresh} />
         }
-        onEndReached={NextPage} // execute function or here end list
+        onEndReached={fetchNextPage} // execute function or here end list
         onEndReachedThreshold={0.1}
         contentContainerStyle={{
           flexGrow: 1,
-          flex: dataList.length === 0 ? 1 : undefined,
+          flex: postList.length === 0 ? 1 : undefined,
         }} // here options is for scrool it works
         ListHeaderComponent={<HomeHeader />}
         ListEmptyComponent={
-          <HomeEmpty refetch={refetch} loading={loading} error={error} />
+          <HomeEmpty refetch={refresh} loading={isLoading} error={isError} />
         }
       />
     </Screen>

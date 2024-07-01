@@ -17,7 +17,8 @@ export function PostCommentScreen({
   // const postID = route.params.postId;
 
   const postID = route.params.postID;
-  const { list, NextPage, hasNextPage, refetch } = usePostCommentList(postID);
+  const { list, fetchNextPage, hasNextPage, refresh } =
+    usePostCommentList(postID);
 
   const { id } = useUser();
 
@@ -27,7 +28,7 @@ export function PostCommentScreen({
     return (
       <PostCommentedItem
         postCommented={item}
-        onRemoveCommented={refetch}
+        onRemoveCommented={refresh}
         userId={id}
         postAuthorID={id}
       />
@@ -45,11 +46,11 @@ export function PostCommentScreen({
           ListFooterComponent={
             <PostCommentedBottom
               hasNextPage={hasNextPage}
-              nextPage={NextPage}
+              nextPage={fetchNextPage}
             />
           }
         />
-        <PostCommentTextMessage onAddComment={refetch} postID={postID} />
+        <PostCommentTextMessage postID={postID} />
       </Box>
     </Screen>
   );
