@@ -4,22 +4,21 @@ import { useToastService } from '@services';
 import { Alert, Pressable } from 'react-native';
 
 interface Props {
+  postId: number;
   postCommented: PostComment;
   userId: number;
   postAuthorID: number;
-  onRemoveCommented: () => void;
 }
 
 export function PostCommentedItem({
   postCommented,
-  onRemoveCommented,
   postAuthorID,
   userId,
+  postId,
 }: Props) {
   const { showToast } = useToastService();
-  const { mutate } = usePostRemove({
+  const { mutate } = usePostRemove(postId, {
     onSuccess: () => {
-      onRemoveCommented();
       showToast({
         message: 'Comentario deletado',
         type: 'error',

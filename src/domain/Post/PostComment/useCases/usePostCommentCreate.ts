@@ -1,13 +1,12 @@
 import { postCommentService } from '../postCommentService';
 import { PostComment } from '../postCommentTypes';
 import { MutationOptions, QueryKeys } from '@infra';
-import { , useMutation, useQueryClient } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 export function usePostCommentCreate(
   postID: number,
   options?: MutationOptions<PostComment>
 ) {
-
   const queryClient = useQueryClient();
 
   const { mutate, isLoading, isError } = useMutation<
@@ -19,14 +18,14 @@ export function usePostCommentCreate(
       postCommentService.create(postID, variables.message),
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: [QueryKeys.PostCommentList, postID]
-      })
+        queryKey: [QueryKeys.PostCommentList, postID],
+      });
     },
     onError: () => {
-      if(options?.onError){
+      if (options?.onError) {
         options.onError(options?.errorMessage || '');
       }
-    }
+    },
   });
 
   // const { mutate, loading, error } = useMutation<
