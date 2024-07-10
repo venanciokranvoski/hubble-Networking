@@ -37,7 +37,7 @@ export function PostCommentedItem({
     Alert.alert('Deseja excluir o comentário', 'pressione confirmar', [
       {
         text: 'Confirmar',
-        onPress: () => mutate({ postCommentedID: postCommented.id }),
+        onPress: () => mutate({ postComentedId: postCommented.id }),
       },
       {
         text: 'Cancelar',

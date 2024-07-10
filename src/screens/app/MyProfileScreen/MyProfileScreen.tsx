@@ -1,34 +1,26 @@
 import React from 'react';
-import {
-  Screen,
-  Activityindicator,
-  Text,
-  Box,
-  ProfileAvatar,
-} from '@components';
+import { Box, Icon, Screen, Text } from '@components';
 import { AppScreenProps } from '@routes';
-import { useUserGetById } from '@domain';
+import { useAuthCredentials } from '@services';
 
-export function MyProfileScreen({ route }: AppScreenProps<'MyProfileScreen'>) {
-  const userId = route.params.userId;
-  const { isError, isLoading, user } = useUserGetById(userId);
+export function MyProfileScreen({
+  navigation,
+}: AppScreenProps<'MyProfileScreen'>) {
+  const { authCredentials } = useAuthCredentials();
+  const name = authCredentials?.user.fullName;
   return (
-    <Screen canGoBack>
-      {isLoading && <Activityindicator color="primary" />}
-      {isError && <Text>Erro ao carregar perfil do Usuario</Text>}
-      {user && (
-        <Box alignItems="center">
-          <ProfileAvatar
-            imageURL={user.profileUrl}
-            size={64}
-            borderRadius={24}
-          />
-          <Text preset="headingMedium" bold>
-            {user.fullName}
-          </Text>
-          <Text>@{user.username}</Text>
-        </Box>
-      )}
+    <Screen>
+      <Box
+        flexDirection="row"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        {name && <Text preset="headingMedium">{name}</Text>}
+        <Icon
+          name="setting"
+          onPress={() => navigation.navigate('SettingsScreen')}
+        />
+      </Box>
     </Screen>
   );
 }

@@ -8,24 +8,27 @@ import {
 import { zodResolver } from '@hookform/resolvers/zod';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Alert, View } from 'react-native';
+import { View } from 'react-native';
 import { AuthScreenProps } from '@routes';
 import {
   LoginShemaValidation,
   loginShemaValidation,
 } from './loginShemaValidation';
+import { useAuthSignIn } from '@domain';
+import { useToastService } from '@services';
 
 export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
+  const { showToast } = useToastService();
+  const { isLoading, signIn } = useAuthSignIn({
+    onError: (message) => showToast({ message, type: 'error' }),
+  });
+
   function navigateToSignUpScreen() {
     navigation.navigate('SignUpScreen');
   }
 
   function navigateToForgotPasswordScreen() {
     navigation.navigate('ForgotPasswordScreen');
-  }
-
-  function handleAuthForm({ email, password }: LoginShemaValidation) {
-    Alert.alert('EMAIL:' + email + ' SENHA : ' + password);
   }
 
   const { control, formState, handleSubmit } = useForm<LoginShemaValidation>({
@@ -36,6 +39,10 @@ export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
     },
     mode: 'onChange',
   });
+
+  function handleAuthForm({ email, password }: LoginShemaValidation) {
+    signIn({ email, password });
+  }
 
   return (
     <Screen>
@@ -74,6 +81,7 @@ export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
         </Text>
 
         <Button
+          loading={isLoading}
           onPress={handleSubmit(handleAuthForm)}
           disabled={!formState.isValid}
           title="Entrar"

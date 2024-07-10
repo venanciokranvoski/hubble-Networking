@@ -10,30 +10,44 @@ import {
 import { useForm } from 'react-hook-form';
 import { signUpSchemaValidation, SignUpSchema } from './signUpSchemaValidation';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { AuthScreenProps, AuthStackScreenProps } from '@routes';
+import { useResetNavigationSucess } from '@hooks';
+import { useAuthSignUp } from '@domain';
 
-export function SignUpScreen() {
-  const { reset } = useResetNavigationSuccess();
-  function createGoLogin() {
-    reset({
-      title: 'Sua conta foi criada com sucesso!',
-      description: 'Agora é so fazer login na nossa plataforma',
-      icon: {
-        name: 'CheckRoundIcon',
-        color: 'sucess',
-      },
-    });
-  }
+const resetParams: AuthStackScreenProps['SucessScreen'] = {
+  title: 'Sua conta foi criada com sucesso!',
+  description: 'Agora é so fazer login na nossa plataforma',
+  icon: {
+    name: 'CheckRoundIcon',
+    color: 'sucess',
+  },
+};
+
+const defaultValues: SignUpSchema = {
+  firstName: '',
+  lastName: '',
+  username: '',
+  email: '',
+  password: '',
+};
+
+export function SignUpScreen({}: AuthScreenProps<'SignUpScreen'>) {
+  const { reset } = useResetNavigationSucess();
+  const { signUp, isLoading } = useAuthSignUp({
+    onSuccess: () => {
+      reset(resetParams);
+    },
+  });
 
   const { control, handleSubmit, formState } = useForm<SignUpSchema>({
     resolver: zodResolver(signUpSchemaValidation),
-    defaultValues: {
-      fullName: '',
-      username: '',
-      email: '',
-      password: '',
-    },
+    defaultValues,
     mode: 'onChange',
   });
+
+  function submitForm(formValue: SignUpSchema) {
+    signUp(formValue);
+  }
 
   return (
     <Screen canGoBack scrollable>
@@ -51,8 +65,16 @@ export function SignUpScreen() {
 
       <FormTextInput
         control={control}
-        name="fullName"
-        label="Nome Completo"
+        name="firstName"
+        label="Nome"
+        placeholder="Digite seu nome completo"
+        boxSetting={{ mb: 's20' }}
+      />
+
+      <FormTextInput
+        control={control}
+        name="lastName"
+        label="Sobrenome"
         placeholder="Digite seu nome completo"
         boxSetting={{ mb: 's20' }}
       />
@@ -73,11 +95,12 @@ export function SignUpScreen() {
         boxSetting={{ mb: 's20' }}
       />
 
-      <Button onPress={createGoLogin} title="Criar uma conta" />
+      <Button
+        onPress={handleSubmit(submitForm)}
+        disabled={!formState.isValid}
+        title="Criar uma conta"
+        loading={isLoading}
+      />
     </Screen>
   );
 }
-function useResetNavigationSuccess(): { reset: any; } {
-  throw new Error('Function not implemented.');
-}
-
