@@ -4,10 +4,10 @@ import { ThemeProvider } from '@shopify/restyle';
 import { theme } from './src/theme/theme';
 import { Router } from '@routes';
 import { Toast } from '@components';
-import reactotron from './src/config/Reactotron';
 import { AuthCredentialsProvider } from './src/services/authCredentials/Providers/AuthCredentialsProviders';
 import { ToastProvider } from '@services';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import reactotron from './src/config/Reactotron';
 
 if (__DEV__) reactotron.connect();
 const queryClientVenon = new QueryClient();

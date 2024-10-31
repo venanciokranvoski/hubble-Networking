@@ -1,7 +1,9 @@
 import { apiConfig } from '@api';
-
-import { AuthCredentialAPI, SignUpDataAPI } from './authTypes';
 import { UserApi } from '../User';
+import { AuthCredentialAPI,
+         SignUpDataAPI, 
+         FildIsAvailableAPI 
+        } from './authTypes';
 
 async function signIn(
   email: string,
@@ -24,8 +26,30 @@ async function signUp(data: SignUpDataAPI): Promise<UserApi> {
   return response.data;
 }
 
+async function isUserNameAvailable(params: {
+  username: string;
+}): Promise<FildIsAvailableAPI> {
+  const response = await apiConfig.get<FildIsAvailableAPI>('validate-username', {
+    params
+  });
+
+  return response.data;
+}
+
+async function isEmailAvailable(params: {
+  email: string;
+}): Promise<FildIsAvailableAPI> {
+  const response = await apiConfig.get<FildIsAvailableAPI>('validate-email', {
+    params,
+  });
+
+  return response.data;
+}
+
 export const authApi = {
   signIn,
   signOut,
   signUp,
+  isUserNameAvailable,
+  isEmailAvailable
 };
