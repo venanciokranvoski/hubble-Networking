@@ -2,6 +2,8 @@ import React, { createContext, useEffect, useState } from 'react';
 import { AuthCredentalsServices } from '../authCredentialsType';
 import { AuthCredentials, authService } from '@domain';
 import { authCredentialStorage } from '../authCredentialsStorage';
+import { apiConfig, registerInterceptor } from '@api';
+import { authApi } from '../../../domain/Auth/authApi';
 
 export const AuthCredentialsContext = createContext<AuthCredentalsServices>({
   authCredentials: null,
@@ -33,6 +35,17 @@ export function AuthCredentialsProvider({
   useEffect(() => {
     startAuthCredentials();
   }, []);
+
+  useEffect(() => {
+    const interceptor = registerInterceptor({
+      authCredentials,
+      removeCredentials, 
+      saveCredentials
+    });
+
+    // remover listener when dismounted component
+    return interceptor;
+  }, [authCredentials]);
 
   async function startAuthCredentials() {
     try {

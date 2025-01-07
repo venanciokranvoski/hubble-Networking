@@ -28,7 +28,7 @@ async function signUp(signUpData: SignUpData): Promise<void> {
 async function updateToken(token: string) {
   apiConfig.defaults.headers.common.Authorization = `Bearer ${token}`;
 }
-
+ 
 async function removeToken() {
   apiConfig.defaults.headers.common.Authorization = null;
 }
@@ -43,6 +43,11 @@ async function isEmailAvailable(email: string): Promise<boolean> {
   return isAvailable;
 }
 
+async function authenticatedByRefleshToken(refleshToken: string ): Promise<AuthCredentials> {
+  const acAPI = await authApi.refleshToken(refleshToken);
+  return authAdapter.toAuthCredentials(acAPI);
+}
+
 
 
 export const authService = {
@@ -52,5 +57,7 @@ export const authService = {
   removeToken,
   signUp,
   isUserNameAvailable,
-  isEmailAvailable
+  isEmailAvailable,
+  authenticatedByRefleshToken,
+  isRefleshToken: authApi.IsRefreshIsToken
 };

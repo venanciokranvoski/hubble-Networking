@@ -16,6 +16,7 @@
       "@utils": ["./src/utils"],
       "@infra": ["src/infra"],
       "@services": ["src/services"]
-    }
+    },
+    "types": ["jest"]
   }
 }
