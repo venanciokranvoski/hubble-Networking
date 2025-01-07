@@ -254,4 +254,8 @@ xcuserdata/
 *.xcscmblueprint
 *.xccheckout
 
+
+#Test
+coverage/
+
 # Fim de https://www.toptal.com/developers/gitignore/api/reactnative

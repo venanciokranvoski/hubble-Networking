@@ -9,7 +9,7 @@ describe('stringUtils', ()=> {
             expect(stringsUtils.capitalizeFirstLetter('maria')).toBe('Maria');
             expect(stringsUtils.capitalizeFirstLetter('ana')).toBe('Ana');
             expect(stringsUtils.capitalizeFirstLetter('na')).toBe('Na');
-            expect(stringsUtils.capitalizeFirstLetter('mm')).toBe('MM');
+            expect(stringsUtils.capitalizeFirstLetter('ma')).toBe('Ma');
         })
     })
 
