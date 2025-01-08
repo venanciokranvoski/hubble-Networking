@@ -1,8 +1,15 @@
 import { dateUtils } from "../dateUtils";
-import {sub, formatISO} from 'date-fns';
+import {sub, formatISO, Duration} from 'date-fns';
 
 const MOCKED_NOW = 1696573824333;
 
+// # implementando um teste limpo 
+function getDateNow(duration: Duration): string {
+    const time = sub(Date.now(), duration);
+    const timeISo = formatISO(time);
+
+    return dateUtils.formatRelative(timeISo);
+}
 
 // spyOn ajuda a verificar se uma função foi executada quantas vezes foi 
 // executrada durante o teste 
@@ -22,35 +29,19 @@ describe('dateUtils', () => {
         });
 
         test('should be displayed in seconds if less than 1 minute ago', () =>  {
-
-            jest.spyOn(Date, 'now').mockImplementation(()=> MOCKED_NOW);
-
-            const time = sub(Date.now(), {minutes: 30 });
-            const timeISO = formatISO(time);
-
-            expect(dateUtils.formatRelative(timeISO)).toBe('30 m');
+            expect( getDateNow({minutes: 30})).toBe('30 m');
         });
 
         test('another test about diferency in Days', () => {
-            const time = sub(Date.now(), {days: 5});
-             const timeISO = formatISO(time);
-
-            expect(dateUtils.formatRelative(timeISO)).toBe('5 d');
+            expect(getDateNow({days: 20})).toBe('3 sem');
         })
 
         test('shouls be displayed inm weeks if less than 4 weeks ago', () => {
-            const time = sub(Date.now(), {weeks: 2, hours: 2 });
-             const timeISO = formatISO(time);
-
-            expect(dateUtils.formatRelative(timeISO)).toBe('2 sem');
+            expect(getDateNow({weeks: 3, hours:2})).toBe('3 sem');
         })
 
         test('another test', () => {
-            const time = sub(Date.now(), {months: 10});
-             const timeISO = formatISO(time);
-
-            expect(dateUtils.formatRelative(timeISO)).toBe('06/12/2022');
+            expect(getDateNow({months: 10})).toBe('06/12/2022');
         })
-
     })
 })
