@@ -5,5 +5,9 @@ module.exports = {
     'node_modules/(?!(react-native|react-native-reanimated|react-native-gesture-handler|@react-native|react-navigation)/)',
   ],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'], // Garante suporte a TypeScript
+  moduleDirectories: [
+    "node_modules",
+    "./src/test"
+  ]
 };
 

@@ -13,7 +13,7 @@ import { buttonPresets } from "./ButtonPresets";
 // +++++++++++++++++
 export type ButtonPreset = "primary" | "outline";
 
-interface ButtonProps extends TouchableOpacityVenonProps {
+ export interface ButtonProps extends TouchableOpacityVenonProps {
   title: string;
   loading?: boolean;
   preset?: ButtonPreset;

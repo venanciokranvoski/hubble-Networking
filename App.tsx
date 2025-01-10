@@ -7,9 +7,9 @@ import { Toast } from '@components';
 import { AuthCredentialsProvider } from './src/services/authCredentials/Providers/AuthCredentialsProviders';
 import { ToastProvider } from '@services';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import reactotron from './src/config/Reactotron';
+// import reactotron from './src/config/Reactotron';
 
-if (__DEV__) reactotron.connect();
+// if (__DEV__) reactotron.connect();
 const queryClientVenon = new QueryClient();
 
 function App(): JSX.Element {

@@ -1,10 +1,21 @@
 import React from "react";
-import { render } from '@testing-library/react-native'
-import { Button } from "../Button";
+import { Button, ButtonProps } from "../Button";
 
-import { ThemeProvider } from "@shopify/restyle";
+import { render, fireEvent, screen  } from '@test-utils';
+import { StyleSheet } from "react-native";
 import { theme } from "@theme";
-import { useNavigation } from "@react-navigation/native";
+
+
+function renderComponent(props?: Partial<ButtonProps>){
+    render(<Button title="Button"  {...props} />);
+
+    const titleElement = screen.getByText(/button title/i); // faz uma chegagem no teste para ver se o texto está inserido. 
+
+    return {
+        titleElement,
+    }
+}
+
 
 
 jest.mock('@react-navigation/native', () => ({
@@ -16,13 +27,29 @@ jest.mock('@react-navigation/native', () => ({
 
 
 describe('<Button />', () => {
+    it('calls the onpress function when it is pressed', ()=> {
+        const mocked = jest.fn();  // mock uma chamada fake para testar se de faot foi executada;
+        const { titleElement } = renderComponent({onPress: mocked});
+        fireEvent.press(titleElement);
 
-    test('the component rendered', () => {
-       const {debug} = render(
-            <ThemeProvider theme={theme}>
-                    <Button title="button title" />
-            </ThemeProvider>
-        )
-        debug();
+        expect(mocked).toHaveBeenCalled();
+    });
+
+    it('does not call onPress fuction when it is disabled and it pressed', ()=>{
+        const mocked = jest.fn();
+        const {titleElement} = renderComponent({
+            onPress: mocked,
+            disabled: true
+        });
+        fireEvent.press(titleElement);
+    });
+
+    it('the title should be gray if button is disabled', ()=> {
+        const {titleElement} = renderComponent({disabled: true});
+
+        const titleStyle = StyleSheet.flatten(titleElement.props.style); // con esta propriedade flatten ela reuni os array em um objeto só!
+
+        expect(titleStyle.color).toEqual(theme.colors.gray2); // equipara para ver se segue o mesmo tipo sendo igual 
     })
+  
 })
