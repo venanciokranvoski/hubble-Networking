@@ -6,8 +6,14 @@ module.exports = {
   ],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'], // Garante suporte a TypeScript
   moduleDirectories: [
-    "node_modules",
-    "./src/test"
+    'node_modules',
+    './src/test'
+  ],
+  modulePathIgnorePatterns: [
+    '.*/mockedData/.*'
+  ],
+  collectCoverageFrom:[
+    'src/{components,utils,hooks,domain}/**/*.{js,jsx,ts,tsx}'
   ]
 };
 

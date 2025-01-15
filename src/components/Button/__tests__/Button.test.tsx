@@ -18,14 +18,6 @@ function renderComponent(props?: Partial<ButtonProps>){
 
 
 
-jest.mock('@react-navigation/native', () => ({
-    useNavigation: jest.fn(()=> ({
-        navigate: jest.fn(),
-        goBack: jest.fn(),
-    })),
-}))
-
-
 describe('<Button />', () => {
     it('calls the onpress function when it is pressed', ()=> {
         const mocked = jest.fn();  // mock uma chamada fake para testar se de faot foi executada;

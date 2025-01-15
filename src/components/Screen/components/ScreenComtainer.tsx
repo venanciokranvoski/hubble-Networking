@@ -2,11 +2,13 @@ import { Box, Icon, Text, TouchableOpacityVenon } from '@components';
 import { useNavigation } from '@react-navigation/native';
 import { ScreenProps } from '../Screen';
 
-const navigation = useNavigation();
+
 
 type Props = Pick<ScreenProps, 'title' | 'canGoBack'>;
 
 export function ScreenComponent({ title, canGoBack }: Props) {
+
+  const navigation = useNavigation();
   return (
     <Box
       flexDirection="row"
