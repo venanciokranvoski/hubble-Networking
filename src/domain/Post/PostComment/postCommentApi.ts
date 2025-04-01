@@ -1,15 +1,15 @@
 import { apiConfig, PageApi, PageParams } from '@api';
 import { PostCommentedAPI } from './postCommentTypes';
-import reactotron from '../../../../src/config/Reactotron';
+
+
+export const POST_COMMENT_PATH = 'user/post_comment'
 
 async function getList(
   post_id: number,
   pageParams?: PageParams
 ): Promise<PageApi<PostCommentedAPI>> {
-  const fetchPost = reactotron.benchmark('fetch comentario!');
-  fetchPost.step('func request');
   const response = await apiConfig.get<PageApi<PostCommentedAPI>>(
-    'user/post_comment',
+    POST_COMMENT_PATH,
     {
       params: {
         post_id,
@@ -21,13 +21,11 @@ async function getList(
   return response.data;
 }
 
-const PATH = 'user/post_comment';
-
 async function create(
   post_id: number,
   message: string
 ): Promise<PostCommentedAPI> {
-  const response = await apiConfig.post<PostCommentedAPI>(PATH, {
+  const response = await apiConfig.post<PostCommentedAPI>(POST_COMMENT_PATH, {
     post_id,
     message,
   });
@@ -36,7 +34,7 @@ async function create(
 
 async function remove(postComentedID: number): Promise<{ message: string }> {
   const response = await apiConfig.delete<{ message: string }>(
-    `${PATH}/${postComentedID}`
+    `${POST_COMMENT_PATH}/${postComentedID}`
   );
 
   return response.data;

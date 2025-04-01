@@ -3,8 +3,7 @@
 // ++++++
 import { QueryKeys, usePaginatedList } from '@infra';
 import { postCommentService } from '../postCommentService';
-import { postService } from '../../postService';
-import { Post } from '../../postTypes';
+
 
 export function usePostCommentList(postId: number) {
   function getList(page: number) {

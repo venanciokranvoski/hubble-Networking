@@ -8,11 +8,12 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest --verbose",
-    "analytic": "jest --coverage --verbose", 
+    "analytic": "jest --coverage --verbose",
     "device": "adb reverse tcp:3333 tcp:3333",
     "c": "npm start -- --reset-cache",
     "git": "--no-verify",
-    "ap": "adb shell input text"
+    "ap": "adb shell input text",
+    "pre-commit": "yarn lint && yarn tsc --noEmit && yarn test"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -25,6 +26,7 @@
     "axios": "^1.6.8",
     "date-fns": "^3.6.0",
     "husky": "^9.1.6",
+    "lodash": "^4.17.21",
     "react": "18.2.0",
     "react-hook-form": "7.43.9",
     "react-native": "0.73.2",
@@ -47,6 +49,7 @@
     "@testing-library/jest-native": "^5.4.3",
     "@testing-library/react-native": "^13.0.0",
     "@types/jest": "^29.5.14",
+    "@types/lodash": "^4.17.16",
     "@types/mocha": "^10.0.10",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
@@ -63,6 +66,7 @@
     "eslint-plugin-react-native": "^4.1.0",
     "eslint-plugin-testing-library": "^7.1.1",
     "jest": "^29.6.3",
+    "msw": "^2.7.3",
     "prettier": "^2.8.8",
     "react-native-device-info": "^10.13.2",
     "react-test-renderer": "18.2.0",

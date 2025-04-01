@@ -15,6 +15,8 @@ import {
 } from '@testing-library/react-native';
 
 import { theme } from '@theme';
+import { AuthCredentialsProvider } from '@services';
+import { Toast } from '@components';
 
 const queryClientConfig: QueryClientConfig = {
     logger: {
@@ -40,11 +42,15 @@ export const wrapAllProviders = () => {
     const queryClient = new QueryClient(queryClientConfig);
 
     return ({ children }: { children: React.ReactNode }) => (
-        <QueryClientProvider client={queryClient}>
-            <ThemeProvider theme={theme}>
-                <NavigationContainer>{children} </NavigationContainer>
-            </ThemeProvider>
-        </QueryClientProvider>
+        <AuthCredentialsProvider>
+            <QueryClientProvider client={queryClient}>
+                <ThemeProvider theme={theme}>
+                    <NavigationContainer>{children} </NavigationContainer>
+                    <Toast />
+                </ThemeProvider>
+            </QueryClientProvider>
+        </AuthCredentialsProvider>
+
     );
 };
 

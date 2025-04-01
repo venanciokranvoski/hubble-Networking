@@ -47,7 +47,7 @@ export function PostCommentedItem({
   }
 
   return (
-    <Pressable disabled={!isAllowToDelete} onLongPress={confirmRemove}>
+    <Pressable testID='post-comment-id' disabled={!isAllowToDelete} onLongPress={confirmRemove}>
       <Box
         paddingHorizontal="s24"
         flexDirection="row"
