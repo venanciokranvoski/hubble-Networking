@@ -1,12 +1,15 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { PostCommentScreen, SettingsScreen, MyProfileScreen } from '@screens';
+import { PostCommentScreen, SettingsScreen, MyProfileScreen, SearchScreen } from '@screens';
 import { AppTabBottomTabParamList, AppTabNavigator } from './AppTabNavigator';
 import { NavigatorScreenParams } from '@react-navigation/native';
+
+
 
 export type AppStackParamList = {
   AppTabNavigator: NavigatorScreenParams<AppTabBottomTabParamList>;
   SettingsScreen: undefined;
+  SearchScreen: undefined;
   PostCommentedScreen: {
     postID: number;
     postAuthorId: number;
