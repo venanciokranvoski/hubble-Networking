@@ -1,14 +1,20 @@
 import React from 'react';
 
-import { Screen, Text } from '@components';
+import { Icon, Screen, Text, TextInput } from '@components';
 import { AppScreenProps } from '@routes';
 
-
-
 export function SearchScreen({}: AppScreenProps<'SearchScreen'>) {
+    const [search, setSearch] = React.useState('');
     return (
-        <Screen>
-            <Text>Search Screen </Text>
-        </Screen>
-    )
+    <Screen
+        canGoBack
+        HeaderComponent={
+        <TextInput
+            onChangeText={setSearch}
+            LeftComponent={<Icon color='gray3' name="search" />}
+        />
+        }>
+        <Text></Text>
+    </Screen>
+    );
 }

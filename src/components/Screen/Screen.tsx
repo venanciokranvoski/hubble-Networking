@@ -6,6 +6,7 @@ import { useAppSafeArea, useAppTheme } from '@hooks';
 
 export interface ScreenProps extends BoxProps {
   children: React.ReactNode;
+  HeaderComponent?: React.ReactNode;
   canGoBack?: boolean;
   scrollable?: boolean;
   title?: string;
@@ -13,6 +14,7 @@ export interface ScreenProps extends BoxProps {
 
 export function Screen({
   children,
+  HeaderComponent,
   canGoBack = false,
   scrollable = false,
   style,
