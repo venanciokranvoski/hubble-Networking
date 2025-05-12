@@ -34,6 +34,7 @@ export function AppStack() {
       <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
       <Stack.Screen name="PostCommentedScreen" component={PostCommentScreen} />
       <Stack.Screen name="MyProfileScreen" component={MyProfileScreen} />
+      <Stack.Screen name='SearchScreen' component={SearchScreen} />
     </Stack.Navigator>
   );
 } /// criar tela

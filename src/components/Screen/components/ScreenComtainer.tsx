@@ -31,8 +31,8 @@ export function ScreenComponent({ title, canGoBack, HeaderComponent }: Props) {
             onPress={navigation.goBack}
           />
           {!showBackLabel && (
-            <Text preset="paragraphMedium" semiBold ml="s10">
-              Voltar
+            <Text preset="paragraphMedium" semiBold ml="s8">
+              
             </Text>
           )}
         </TouchableOpacityVenon>

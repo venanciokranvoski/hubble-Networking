@@ -9,7 +9,7 @@ export interface MetaDatePage {
   previous_page_url: boolean;
 }
 
-export interface Page<T> {
+export interface Page<Data> {
   meta: MetaDatePage;
-  data: T[];
+  data: Data[];
 }

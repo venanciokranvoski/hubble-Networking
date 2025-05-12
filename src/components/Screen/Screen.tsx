@@ -35,7 +35,7 @@ export function Screen({
           style={[{ paddingTop: top, paddingBottom: bottom }, style]} // Margin style
           {...boxProps}
         >
-          {canGoBack && <ScreenComponent canGoBack={canGoBack} title={title} />}
+          {canGoBack && <ScreenComponent canGoBack={canGoBack} title={title} HeaderComponent={HeaderComponent} />}
           {children}
         </Box>
       </Container>

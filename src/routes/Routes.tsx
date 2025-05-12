@@ -16,7 +16,7 @@ export function Router() {
         justifyContent="center"
         alignItems="center"
       >
-        <Activityindicator size={'large'} />
+        <Activityindicator color='primary' size={'large'} />
       </Box>
     );
   }

@@ -12,10 +12,17 @@ interface getUsePaginatedList<TData> {
   hasNextPage: boolean; // has next page ?
 }
 
+interface PaginatedListOption {
+  enabled?: boolean;
+
+  staleTime?: number;
+}
+
 // I´m defined a function inside in other function!
 export function usePaginatedList<Data>(
   queryKey: readonly unknown[],
-  getList: (page: number) => Promise<Page<Data>>
+  getList: (page: number) => Promise<Page<Data>>,
+  options?: PaginatedListOption,
 ): getUsePaginatedList<Data> {
   const [list, setList] = useState<Data[]>([]);
 
@@ -24,6 +31,8 @@ export function usePaginatedList<Data>(
     queryFn: ({ pageParam = 1 }) => getList(pageParam),
     getNextPageParam: ({ meta }) =>
       meta.hasNextPage ? meta.currentPage + 1 : undefined,
+      enabled: options?.enabled,
+      staleTime: options?.staleTime,
   });
 
   useEffect(() => {
