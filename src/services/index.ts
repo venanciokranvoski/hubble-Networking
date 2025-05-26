@@ -5,3 +5,4 @@ export * from './toast/useToast';
 
 export * from './authCredentials';
 export * from './Storage';
+export * from './searchHistory'

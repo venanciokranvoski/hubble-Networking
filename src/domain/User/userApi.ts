@@ -1,7 +1,7 @@
 import { apiConfig, PageApi } from '@api';
 import { UserApi } from './userTypes';
 
-const PATH = 'users';
+export const USER_PATH = 'users';
 
 async function getById(userID: string): Promise<UserApi> {
   const response = await apiConfig.get<UserApi>(`${PATH}/${userID}`);

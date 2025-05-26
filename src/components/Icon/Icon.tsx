@@ -1,4 +1,4 @@
-import React, { Profiler } from 'react';
+import React from 'react';
 import { Pressable } from 'react-native';
 import { ThemeColors } from '@theme';
 import { useAppTheme } from '@hooks';

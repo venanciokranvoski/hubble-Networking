@@ -2,7 +2,7 @@ module.exports = {
   preset: 'react-native',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'], // Certifique-se de que o arquivo existe
   transformIgnorePatterns: [
-    'node_modules/(?!(react-native|react-native-reanimated|react-native-gesture-handler|@react-native(-community)?|react-navigation|react-native-safe-area-context)/)'
+    'node_modules/(?!(react-native|react-native-reanimated|react-native-gesture-handler|@react-native(-community)?|react-navigation|react-native-safe-area-context|@react-navigation)/)'
   ],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'], // Garante suporte a TypeScript
   moduleDirectories: [
@@ -13,7 +13,8 @@ module.exports = {
     '.*/mockedData/.*'
   ],
   collectCoverageFrom:[
-    'src/{components,utils,hooks,domain}/**/*.{js,jsx,ts,tsx}'
-  ]
+    'src/{components,utils,hooks,domain}/**/*.{js,jsx,ts,tsx}',
+  ],
+  coveragePathIgnorePatterns: ['/node_modules/', 'index'],
 };
 

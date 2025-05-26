@@ -3,14 +3,13 @@ import { useToast, useToastService } from '@services';
 import { ToastContent } from './components/ToasContent';
 import { Animated } from 'react-native';
 
-const DEFAULT_DURATION = 2000;
-
-
-const fadeAnim = React.useRef(new Animated.Value(0)).current;
-
 export function Toast() {
   const toast = useToast();
   const { hideToast } = useToastService();
+
+  const DEFAULT_DURATION = 2000;
+
+  const fadeAnim = React.useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     if (toast) {

@@ -1,6 +1,7 @@
 export * from './Post/postTypes';
 export * from './Post/postService';
 export * from './useCases/usePostList';
+export {USER_PATH} from './User/userApi'
 export * from './Post/PostComment/postCommentApi'
 export * from './Post/PostComment/useCases/usePostCommentCreate';
 export * from './Auth';
