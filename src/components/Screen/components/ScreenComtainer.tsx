@@ -1,12 +1,12 @@
-import { Box, Icon, Text, TouchableOpacityVenon } from '@components';
+import { Box, BoxProps, Icon, Text, TouchableOpacityVenon } from '@components';
 import { useNavigation } from '@react-navigation/native';
 import { ScreenProps } from '../Screen';
 
 
 
-type Props = Pick<ScreenProps, 'title' | 'canGoBack' | 'HeaderComponent'>;
+type Props = Pick<ScreenProps, 'title' | 'canGoBack' | 'HeaderComponent'> & BoxProps;
 
-export function ScreenComponent({ title, canGoBack, HeaderComponent }: Props) {
+export function ScreenComponent({ title, canGoBack, HeaderComponent, ...BoxProps }: Props) {
 
   const navigation = useNavigation();
   const  showBackLabel = !title && !HeaderComponent;
@@ -16,9 +16,11 @@ export function ScreenComponent({ title, canGoBack, HeaderComponent }: Props) {
       alignItems="center"
       justifyContent="space-between"
       marginBottom="s24"
+      {...BoxProps}
     >
       {canGoBack && (
         <TouchableOpacityVenon
+        testID='screen-back-button'
           flexDirection="row"
           alignItems="center"
           justifyContent="space-between"

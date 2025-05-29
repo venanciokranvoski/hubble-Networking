@@ -1,12 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:1:1-25:12
-MERGED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:1:1-25:12
+ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:1:1-29:12
+MERGED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:1:1-29:12
 INJECTED from /Users/user/Documents/Study/hubble-Networking/android/app/src/debug/AndroidManifest.xml:2:1-9:12
 INJECTED from /Users/user/Documents/Study/hubble-Networking/android/app/src/debug/AndroidManifest.xml:2:1-9:12
 INJECTED from /Users/user/Documents/Study/hubble-Networking/android/app/src/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:flipper-integration:0.73.2] /Users/user/.gradle/caches/transforms-3/50aac7d389ae5d1436ebe9b90990835b/transformed/jetified-flipper-integration-0.73.2-debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-async-storage_async-storage] /Users/user/Documents/Study/hubble-Networking/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-camera-roll_camera-roll] /Users/user/Documents/Study/hubble-Networking/node_modules/@react-native-camera-roll/camera-roll/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-mmkv] /Users/user/Documents/Study/hubble-Networking/node_modules/react-native-mmkv/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-safe-area-context] /Users/user/Documents/Study/hubble-Networking/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-screens] /Users/user/Documents/Study/hubble-Networking/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
@@ -105,10 +106,28 @@ MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/user/.gradl
 MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/user/.gradle/caches/transforms-3/7d00a3d973e62c64256363b4cb614082/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:24:5-67
 	android:name
 		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:3:22-64
+uses-permission#android.permission.READ_MEDIA_IMAGES
+ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:4:5-76
+	android:name
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:4:22-73
+uses-permission#android.permission.READ_MEDIA_VIDEO
+ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:5:5-75
+	android:name
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:5:22-72
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:6:5-107
+	android:maxSdkVersion
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:6:78-104
+	android:name
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:6:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:7:22-78
 application
-ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:5:5-24:19
-MERGED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:5:5-24:19
-MERGED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:5:5-24:19
+ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:9:5-28:19
+MERGED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:9:5-28:19
+MERGED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:9:5-28:19
 INJECTED from /Users/user/Documents/Study/hubble-Networking/android/app/src/debug/AndroidManifest.xml:5:5-8:50
 MERGED from [com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:18:5-22:19
 MERGED from [com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:18:5-22:19
@@ -147,53 +166,53 @@ MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/user/.gra
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] /Users/user/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:7:7-39
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:7:7-39
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:11:7-39
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:11:7-39
 	tools:ignore
 		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/debug/AndroidManifest.xml:8:9-48
 	android:roundIcon
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:9:7-52
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:9:7-52
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:13:7-52
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:13:7-52
 	tools:targetApi
 		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/debug/AndroidManifest.xml:7:9-29
 	android:icon
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:8:7-41
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:8:7-41
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:12:7-41
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:12:7-41
 	android:allowBackup
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:10:7-34
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:10:7-34
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:14:7-34
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:14:7-34
 	android:theme
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:11:7-38
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:11:7-38
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:15:7-38
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:15:7-38
 	android:usesCleartextTraffic
 		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/debug/AndroidManifest.xml:6:9-44
 	android:name
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:6:7-38
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:6:7-38
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:10:7-38
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:10:7-38
 activity#com.nubbleapp.MainActivity
-ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:12:7-23:18
+ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:16:7-27:18
 	android:label
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:14:9-41
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:18:9-41
 	android:launchMode
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:16:9-40
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:20:9-40
 	android:windowSoftInputMode
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:17:9-51
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:21:9-51
 	android:exported
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:18:9-32
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:22:9-32
 	android:configChanges
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:15:9-118
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:19:9-118
 	android:name
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:13:9-37
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:17:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:19:9-22:25
+ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:23:9-26:25
 action#android.intent.action.MAIN
-ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:20:13-65
+ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:24:13-65
 	android:name
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:20:21-62
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:24:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:21:13-73
+ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:25:13-73
 	android:name
-		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:21:23-70
+		ADDED from /Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:25:23-70
 uses-sdk
 INJECTED from /Users/user/Documents/Study/hubble-Networking/android/app/src/debug/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/user/Documents/Study/hubble-Networking/android/app/src/debug/AndroidManifest.xml
@@ -202,6 +221,8 @@ MERGED from [com.facebook.react:flipper-integration:0.73.2] /Users/user/.gradle/
 MERGED from [com.facebook.react:flipper-integration:0.73.2] /Users/user/.gradle/caches/transforms-3/50aac7d389ae5d1436ebe9b90990835b/transformed/jetified-flipper-integration-0.73.2-debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-async-storage_async-storage] /Users/user/Documents/Study/hubble-Networking/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-async-storage_async-storage] /Users/user/Documents/Study/hubble-Networking/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-camera-roll_camera-roll] /Users/user/Documents/Study/hubble-Networking/node_modules/@react-native-camera-roll/camera-roll/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-camera-roll_camera-roll] /Users/user/Documents/Study/hubble-Networking/node_modules/@react-native-camera-roll/camera-roll/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-mmkv] /Users/user/Documents/Study/hubble-Networking/node_modules/react-native-mmkv/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-mmkv] /Users/user/Documents/Study/hubble-Networking/node_modules/react-native-mmkv/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-safe-area-context] /Users/user/Documents/Study/hubble-Networking/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44

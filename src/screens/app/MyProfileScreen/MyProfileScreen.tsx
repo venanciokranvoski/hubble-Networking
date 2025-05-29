@@ -5,7 +5,7 @@ import { useAuthCredentials } from '@services';
 
 export function MyProfileScreen({
   navigation,
-}: AppScreenProps<'MyProfileScreen'>) {
+}: AppScreenProps<'ProfileScreen'>) {
   const { authCredentials } = useAuthCredentials();
   const name = authCredentials?.user.fullName;
   return (

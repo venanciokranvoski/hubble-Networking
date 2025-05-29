@@ -11,7 +11,7 @@ import { buttonPresets } from "./ButtonPresets";
 // preset: primary secondary
 // default, disabled
 // +++++++++++++++++
-export type ButtonPreset = "primary" | "outline";
+export type ButtonPreset = "primary" | "outline" | "ghost";
 
  export interface ButtonProps extends TouchableOpacityVenonProps {
   title: string;
@@ -42,7 +42,7 @@ export function Button({
       {loading ? (
         <ActivityIndicator />
       ) : (
-        <Text preset="paragraphMedium" bold color={buttonPreset.content}>
+        <Text preset="paragraphMedium" bold color={buttonPreset.content.color} {...buttonPreset.content.textProps}>
           {title}
         </Text>
       )}

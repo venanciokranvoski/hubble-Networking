@@ -13,17 +13,16 @@ const user1: UserApi = {
   full_name: 'Mateus de Souza',
 };
 
-
 const user2: UserApi = {
-  id: 17,
-  first_name: 'augusto',
-  last_name: 'dumas',
-  username: 'veve',
-  email: 'dumasvenancioaugusto@gmail.com',
+  id: 18,
+  first_name: 'maria',
+  last_name: 'santos',
+  username: 'maria', 
+  email: 'maria.santos@gmail.com',
   profile_url:
-    'https://nubble-development.s3.sa-east-1.amazonaws.com/backend-integration/8-mateus.png',
+    'https://nubble-development.s3.sa-east-1.amazonaws.com/backend-integration/8-maria.png',
   is_online: false,
-  full_name: 'Mateus de Souza',
+  full_name: 'maria santos', 
 };
 
 
@@ -37,7 +36,7 @@ const mockedUserResponse: PageApi<UserApi> = {
         last_page: 1,
         first_page: 1,
         first_page_url: '/?page=1', 
-        last_page_url: '/?page=2',
+        last_page_url: '/?page=1',
         next_page_url: null,
         previous_page_url: null,
     },

@@ -29,7 +29,7 @@ export function ProfileUser({
     if (onPress) {
       onPress(event);
     }
-    navigation.navigate('MyProfileScreen', { userId: user.id });
+    navigation.navigate('ProfileScreen', { userId: user.id });
   }
 
   return (
