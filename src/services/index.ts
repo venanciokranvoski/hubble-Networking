@@ -5,3 +5,4 @@ export * from './authCredentials';
 export * from './Storage';
 export * from './searchHistory'
 export * from './cameraRoll'
+export * from './permission'

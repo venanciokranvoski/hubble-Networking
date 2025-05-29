@@ -10,6 +10,7 @@ export * from './app/ProfileScreen/ProfileScreen';
 export * from './app/MyProfileScreen/MyProfileScreen';
 export * from './app/NewPostScreen/NewPostScreen';
 export * from './app/SettingsScreen/SettingsScreen';
+export * from './app/PublishedPostScreen/PublishedPostScreen';
 
 export * from './app/PostCommentedScreen/PostComponentScreen';
 export * from './app/SearchScreen/SearchScreen';

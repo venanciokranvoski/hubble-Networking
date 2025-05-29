@@ -10,7 +10,7 @@ export interface ScreenProps extends BoxProps {
   canGoBack?: boolean;
   scrollable?: boolean;
   title?: string;
-  noPaddingHorizontal: boolean;
+  noPaddingHorizontal?: boolean;
 }
 
 export function Screen({

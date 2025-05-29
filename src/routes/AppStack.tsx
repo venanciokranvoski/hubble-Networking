@@ -1,8 +1,9 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { PostCommentScreen, SettingsScreen, SearchScreen, ProfileScreen } from '@screens';
+import { PostCommentScreen, SettingsScreen, SearchScreen, ProfileScreen, PublishedPostScreen } from '@screens';
 import { AppTabBottomTabParamList, AppTabNavigator } from './AppTabNavigator';
 import { NavigatorScreenParams } from '@react-navigation/native';
+
 
 
 
@@ -18,6 +19,9 @@ export type AppStackParamList = {
   ProfileScreen: {
     userId: number;
   };
+  PublishedPostScreen:{
+    imageURL: string;
+  }
 };
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -39,6 +43,7 @@ export function AppStack({initialRouteName = 'AppTabNavigator'}: Props) {
       <Stack.Screen name="PostCommentedScreen" component={PostCommentScreen} />
       <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
       <Stack.Screen name='SearchScreen' component={SearchScreen} />
+      <Stack.Screen name='PublishedPostScreen' component={PublishedPostScreen} />
     </Stack.Navigator>
   );
 } /// criar tela
