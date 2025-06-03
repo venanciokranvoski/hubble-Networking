@@ -16,6 +16,7 @@ async function signIn(
     email,
     password,
   });
+  console.log(JSON.stringify(response.data))
   return response.data;
 }
 
@@ -45,7 +46,7 @@ async function isEmailAvailable(params: {
   const response = await apiConfig.get<FildIsAvailableAPI>('auth/validate-email', {
     params,
   });
-
+  console.log(response.data)
   return response.data;
 }
 

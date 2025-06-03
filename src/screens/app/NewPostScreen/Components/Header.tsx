@@ -2,6 +2,7 @@
 import { useNavigation } from '@react-navigation/native';
     import React from 'react';
     import { ImageBackground, StyleSheet } from 'react-native';
+    import {imagens} from '@assets';
 
     interface Props {
     imageURL?: string;
@@ -19,7 +20,7 @@ import { useNavigation } from '@react-navigation/native';
     return (
         <Box>
         <ImageBackground
-            source={{uri: imageURL }}
+            source={imageURL ? {uri: imageURL }: imagens.imagePlaceholder}
             style={[
             {
             width: imageWidth,
@@ -34,9 +35,9 @@ import { useNavigation } from '@react-navigation/native';
                 />
             )}
         </ImageBackground>
-        <Box {...$optionStyle}>
+        <Box {...$optionStyle} >
             <Text preset="headingSmall">Sua Galeria</Text>
-            <Icon name="camera" />
+            <Icon name="camera" onPress={()=> navigation.navigate('CameraScreen')} />
         </Box>
         </Box>
     );

@@ -1,0 +1,6 @@
+module Pods_NubbleApp_NubbleAppTests {
+  umbrella header "Pods-NubbleApp-NubbleAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -3,13 +3,32 @@
 
     import { Button, Screen, Text, TextInput } from '@components';
     import { AppScreenProps } from '@routes';
+import { useToastService } from '@services';
+import { usePostCreate } from '@domain';
+
 
     const IMAGE_WIDTH = Dimensions.get('screen').width / 2;
 
     export function PublishedPostScreen({
     route,
+    navigation
     }: AppScreenProps<'PublishedPostScreen'>) {
     const [description, setDescription] = React.useState<string>('');
+    const {showToast} = useToastService();
+    const imageUri = route.params.imageURL;
+
+    const {createPost, isLoading} = usePostCreate({
+        onSuccess:() => {
+            navigation.navigate('AppTabNavigator', {screen: 'HomeScreen'});
+            showToast({message: 'Foto publicada!', type: 'sucess'})
+        }
+    })
+
+    function publishPost(){
+        createPost({description, imageUri})
+    }
+
+
     return (
         <Screen scrollable canGoBack title="Nove Post">
         <Image
@@ -30,7 +49,7 @@
             placeholder="Digite aqui..."
             containerProps={{borderWidth:0}}
         />
-        <Button mt='s56' title='Publicar post' />
+        <Button mt='s56' title='Publicar post' onPress={publishPost}  loading={isLoading} />
         </Screen>
     );
     }

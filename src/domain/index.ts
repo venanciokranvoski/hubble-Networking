@@ -4,5 +4,6 @@ export * from './useCases/usePostList';
 export {USER_PATH} from './User/userApi'
 export * from './Post/PostComment/postCommentApi'
 export * from './Post/PostComment/useCases/usePostCommentCreate';
+export * from './Post/usePostCreate';
 export * from './Auth';
 export * from './User';

@@ -32,6 +32,7 @@ import { TrashIcon } from '../../Icons/TrashIcon';
 import { CheckRoundIcon } from '../../Icons/CheckroundIcon';
 import { MessageRoundIcon } from '../../Icons/MessageRound';
 import { ErrorIcon } from '../../Icons/ErrorIcon';
+import { Camera_click } from  '../../Icons/Camera_click';
 
 export interface iconBase {
   size?: number;
@@ -105,6 +106,7 @@ const IconRegister = {
   CheckRoundIcon: CheckRoundIcon,
   MessageRoundIcon: MessageRoundIcon,
   ErrorIcon: ErrorIcon,
+  CameraClick: Camera_click
 };
 
 type IconType = typeof IconRegister;

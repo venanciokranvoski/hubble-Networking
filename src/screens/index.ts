@@ -14,3 +14,4 @@ export * from './app/PublishedPostScreen/PublishedPostScreen';
 
 export * from './app/PostCommentedScreen/PostComponentScreen';
 export * from './app/SearchScreen/SearchScreen';
+export * from './app/CameraScreen/CameraScreen';

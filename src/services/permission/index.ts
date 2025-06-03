@@ -1,2 +1,3 @@
-export * from './PermissionService';
-export * from './permissionTypes/PermissionTypes';
+export * from './PermissionService'
+export * from './PermissionTypes';
+export * from './UsePermission';

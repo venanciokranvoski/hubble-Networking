@@ -11,12 +11,12 @@
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:3:5-67
 11-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:3:22-64
-12    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-12-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:4:5-76
-12-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:4:22-73
-13    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-13-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:5:5-75
-13-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:5:22-72
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:4:5-65
+12-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:4:22-62
+13    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+13-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:5:5-76
+13-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:5:22-73
 14    <uses-permission
 14-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:6:5-107
 15        android:name="android.permission.READ_EXTERNAL_STORAGE"
@@ -26,129 +26,240 @@
 17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 17-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:7:5-81
 17-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:7:22-78
-18    <!--
-19    This manifest file is used only by Gradle to configure debug-only capabilities
-20    for React Native Apps.
-21    -->
-22    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-22-->[com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:16:5-78
-22-->[com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:16:22-75
-23    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-23-->[com.facebook.flipper:flipper:0.201.0] /Users/user/.gradle/caches/transforms-3/9b2c28bd5719adb7e465469e2ca76c12/transformed/jetified-flipper-0.201.0/AndroidManifest.xml:14:5-76
-23-->[com.facebook.flipper:flipper:0.201.0] /Users/user/.gradle/caches/transforms-3/9b2c28bd5719adb7e465469e2ca76c12/transformed/jetified-flipper-0.201.0/AndroidManifest.xml:14:22-73
-24    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-24-->[com.google.android.gms:play-services-iid:17.0.0] /Users/user/.gradle/caches/transforms-3/7d00a3d973e62c64256363b4cb614082/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:5-82
-24-->[com.google.android.gms:play-services-iid:17.0.0] /Users/user/.gradle/caches/transforms-3/7d00a3d973e62c64256363b4cb614082/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:22-79
-25
-26    <permission
-26-->[androidx.core:core:1.9.0] /Users/user/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-27        android:name="com.nubbleapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-27-->[androidx.core:core:1.9.0] /Users/user/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-28        android:protectionLevel="signature" />
-28-->[androidx.core:core:1.9.0] /Users/user/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-29
-30    <uses-permission android:name="com.nubbleapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-30-->[androidx.core:core:1.9.0] /Users/user/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-30-->[androidx.core:core:1.9.0] /Users/user/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-31    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-31-->[com.android.installreferrer:installreferrer:1.1.2] /Users/user/.gradle/caches/transforms-3/7347c325151bfcdf75aa8769efa26987/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:5-110
-31-->[com.android.installreferrer:installreferrer:1.1.2] /Users/user/.gradle/caches/transforms-3/7347c325151bfcdf75aa8769efa26987/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:22-107
-32
-33    <application
-33-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:9:5-28:19
-34        android:name="com.nubbleapp.MainApplication"
-34-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:10:7-38
-35        android:allowBackup="false"
-35-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:14:7-34
-36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-36-->[androidx.core:core:1.9.0] /Users/user/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
-37        android:debuggable="true"
-38        android:extractNativeLibs="true"
-39        android:icon="@mipmap/ic_launcher"
-39-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:12:7-41
-40        android:label="@string/app_name"
-40-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:11:7-39
-41        android:roundIcon="@mipmap/ic_launcher_round"
-41-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:13:7-52
-42        android:theme="@style/AppTheme"
-42-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:15:7-38
-43        android:usesCleartextTraffic="true" >
-43-->/Users/user/Documents/Study/hubble-Networking/android/app/src/debug/AndroidManifest.xml:6:9-44
-44        <activity
-44-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:16:7-27:18
-45            android:name="com.nubbleapp.MainActivity"
-45-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:17:9-37
-46            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-46-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:19:9-118
-47            android:exported="true"
-47-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:22:9-32
-48            android:label="@string/app_name"
-48-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:18:9-41
-49            android:launchMode="singleTask"
-49-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:20:9-40
-50            android:windowSoftInputMode="adjustResize" >
-50-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:21:9-51
-51            <intent-filter>
-51-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:23:9-26:25
-52                <action android:name="android.intent.action.MAIN" />
-52-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:24:13-65
-52-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:24:21-62
-53
-54                <category android:name="android.intent.category.LAUNCHER" />
-54-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:25:13-73
-54-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:25:23-70
-55            </intent-filter>
-56        </activity>
-57        <activity
-57-->[com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:19:9-21:40
-58            android:name="com.facebook.react.devsupport.DevSettingsActivity"
-58-->[com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:20:13-77
-59            android:exported="false" />
-59-->[com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:21:13-37
-60        <activity
-60-->[com.google.android.gms:play-services-base:17.0.0] /Users/user/.gradle/caches/transforms-3/e853fdf1e0156c040588ca88cd821bd9/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
-61            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-61-->[com.google.android.gms:play-services-base:17.0.0] /Users/user/.gradle/caches/transforms-3/e853fdf1e0156c040588ca88cd821bd9/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-62            android:exported="false"
-62-->[com.google.android.gms:play-services-base:17.0.0] /Users/user/.gradle/caches/transforms-3/e853fdf1e0156c040588ca88cd821bd9/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
-63            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-63-->[com.google.android.gms:play-services-base:17.0.0] /Users/user/.gradle/caches/transforms-3/e853fdf1e0156c040588ca88cd821bd9/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
-64
-65        <meta-data
-65-->[com.google.android.gms:play-services-basement:17.0.0] /Users/user/.gradle/caches/transforms-3/f4982a588457462187a3ce8badf7ea0f/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-66            android:name="com.google.android.gms.version"
-66-->[com.google.android.gms:play-services-basement:17.0.0] /Users/user/.gradle/caches/transforms-3/f4982a588457462187a3ce8badf7ea0f/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-67            android:value="@integer/google_play_services_version" />
-67-->[com.google.android.gms:play-services-basement:17.0.0] /Users/user/.gradle/caches/transforms-3/f4982a588457462187a3ce8badf7ea0f/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-68
-69        <provider
-69-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-70            android:name="androidx.startup.InitializationProvider"
-70-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-71            android:authorities="com.nubbleapp.androidx-startup"
-71-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-72            android:exported="false" >
-72-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+18
+19    <queries>
+19-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-18:15
+20
+21        <!-- Query open documents -->
+22        <intent>
+22-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-17:18
+23            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+23-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-79
+23-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:21-76
+24        </intent>
+25    </queries>
+26    <!--
+27    This manifest file is used only by Gradle to configure debug-only capabilities
+28    for React Native Apps.
+29    -->
+30    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+30-->[com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:16:5-78
+30-->[com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:16:22-75
+31    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+31-->[com.facebook.flipper:flipper:0.201.0] /Users/user/.gradle/caches/transforms-3/9b2c28bd5719adb7e465469e2ca76c12/transformed/jetified-flipper-0.201.0/AndroidManifest.xml:14:5-76
+31-->[com.facebook.flipper:flipper:0.201.0] /Users/user/.gradle/caches/transforms-3/9b2c28bd5719adb7e465469e2ca76c12/transformed/jetified-flipper-0.201.0/AndroidManifest.xml:14:22-73
+32    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+32-->[com.google.android.gms:play-services-iid:17.0.0] /Users/user/.gradle/caches/transforms-3/7d00a3d973e62c64256363b4cb614082/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:5-82
+32-->[com.google.android.gms:play-services-iid:17.0.0] /Users/user/.gradle/caches/transforms-3/7d00a3d973e62c64256363b4cb614082/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:22-79
+33
+34    <permission
+34-->[androidx.core:core:1.12.0] /Users/user/.gradle/caches/transforms-3/37090c8cbd1dedc6ee2ba619cf52b6bb/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+35        android:name="com.nubbleapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+35-->[androidx.core:core:1.12.0] /Users/user/.gradle/caches/transforms-3/37090c8cbd1dedc6ee2ba619cf52b6bb/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+36        android:protectionLevel="signature" />
+36-->[androidx.core:core:1.12.0] /Users/user/.gradle/caches/transforms-3/37090c8cbd1dedc6ee2ba619cf52b6bb/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+37
+38    <uses-permission android:name="com.nubbleapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+38-->[androidx.core:core:1.12.0] /Users/user/.gradle/caches/transforms-3/37090c8cbd1dedc6ee2ba619cf52b6bb/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+38-->[androidx.core:core:1.12.0] /Users/user/.gradle/caches/transforms-3/37090c8cbd1dedc6ee2ba619cf52b6bb/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+39    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+40    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+40-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/user/.gradle/caches/transforms-3/3c8ce7608c11d2c124765c7472926828/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+40-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/user/.gradle/caches/transforms-3/3c8ce7608c11d2c124765c7472926828/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:22-76
+41    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+41-->[com.android.installreferrer:installreferrer:1.1.2] /Users/user/.gradle/caches/transforms-3/7347c325151bfcdf75aa8769efa26987/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:5-110
+41-->[com.android.installreferrer:installreferrer:1.1.2] /Users/user/.gradle/caches/transforms-3/7347c325151bfcdf75aa8769efa26987/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:22-107
+42
+43    <application
+43-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:9:5-28:19
+44        android:name="com.nubbleapp.MainApplication"
+44-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:10:7-38
+45        android:allowBackup="false"
+45-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:14:7-34
+46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+46-->[androidx.core:core:1.12.0] /Users/user/.gradle/caches/transforms-3/37090c8cbd1dedc6ee2ba619cf52b6bb/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+47        android:debuggable="true"
+48        android:extractNativeLibs="true"
+49        android:icon="@mipmap/ic_launcher"
+49-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:12:7-41
+50        android:label="@string/app_name"
+50-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:11:7-39
+51        android:roundIcon="@mipmap/ic_launcher_round"
+51-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:13:7-52
+52        android:theme="@style/AppTheme"
+52-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:15:7-38
+53        android:usesCleartextTraffic="true" >
+53-->/Users/user/Documents/Study/hubble-Networking/android/app/src/debug/AndroidManifest.xml:6:9-44
+54        <activity
+54-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:16:7-27:18
+55            android:name="com.nubbleapp.MainActivity"
+55-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:17:9-37
+56            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+56-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:19:9-118
+57            android:exported="true"
+57-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:22:9-32
+58            android:label="@string/app_name"
+58-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:18:9-41
+59            android:launchMode="singleTask"
+59-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:20:9-40
+60            android:windowSoftInputMode="adjustResize" >
+60-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:21:9-51
+61            <intent-filter>
+61-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:23:9-26:25
+62                <action android:name="android.intent.action.MAIN" />
+62-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:24:13-65
+62-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:24:21-62
+63
+64                <category android:name="android.intent.category.LAUNCHER" />
+64-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:25:13-73
+64-->/Users/user/Documents/Study/hubble-Networking/android/app/src/main/AndroidManifest.xml:25:23-70
+65            </intent-filter>
+66        </activity>
+67
+68        <provider
+68-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:9-30:20
+69            android:name="expo.modules.filesystem.FileSystemFileProvider"
+69-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-74
+70            android:authorities="com.nubbleapp.FileSystemFileProvider"
+70-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-74
+71            android:exported="false"
+71-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-37
+72            android:grantUriPermissions="true" >
+72-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-47
 73            <meta-data
-73-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-74                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-74-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-75                android:value="androidx.startup" />
-75-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-76            <meta-data
-76-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/user/.gradle/caches/transforms-3/71b91ea8216105cda74b0317da307340/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-77                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-77-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/user/.gradle/caches/transforms-3/71b91ea8216105cda74b0317da307340/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-78                android:value="androidx.startup" />
-78-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/user/.gradle/caches/transforms-3/71b91ea8216105cda74b0317da307340/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-79        </provider>
-80
+73-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:70
+74                android:name="android.support.FILE_PROVIDER_PATHS"
+74-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-67
+75                android:resource="@xml/file_system_provider_paths" />
+75-->[:expo-file-system] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:17-67
+76        </provider>
+77
+78        <meta-data
+78-->[:expo-modules-core] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:9-11:89
+79            android:name="org.unimodules.core.AppLoader#react-native-headless"
+79-->[:expo-modules-core] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:13-79
+80            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+80-->[:expo-modules-core] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-86
 81        <meta-data
-81-->[com.facebook.soloader:soloader:0.10.5] /Users/user/.gradle/caches/transforms-3/03d018e18e7118763cc731de8f689ba0/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:12:9-14:37
+81-->[:expo-modules-core] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-15:45
 82            android:name="com.facebook.soloader.enabled"
-82-->[com.facebook.soloader:soloader:0.10.5] /Users/user/.gradle/caches/transforms-3/03d018e18e7118763cc731de8f689ba0/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:13:13-57
-83            android:value="false" />
-83-->[com.facebook.soloader:soloader:0.10.5] /Users/user/.gradle/caches/transforms-3/03d018e18e7118763cc731de8f689ba0/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:14:13-34
-84    </application>
-85
-86</manifest>
+82-->[:expo-modules-core] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-57
+83            android:value="true" />
+83-->[:expo-modules-core] /Users/user/Documents/Study/hubble-Networking/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-33
+84
+85        <activity
+85-->[com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:19:9-21:40
+86            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+86-->[com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:20:13-77
+87            android:exported="false" />
+87-->[com.facebook.react:react-android:0.73.2] /Users/user/.gradle/caches/transforms-3/d10d040f6dc36d35e250d48d5ebb15bd/transformed/jetified-react-android-0.73.2-debug/AndroidManifest.xml:21:13-37
+88
+89        <service
+89-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/user/.gradle/caches/transforms-3/6c0561e1c87bef49df048e30c7a124e4/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:9:9-15:19
+90            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+90-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/user/.gradle/caches/transforms-3/6c0561e1c87bef49df048e30c7a124e4/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:10:13-91
+91            android:directBootAware="true"
+91-->[com.google.mlkit:common:18.9.0] /Users/user/.gradle/caches/transforms-3/5f745a34c6c52aab1659caa5e3026e01/transformed/jetified-common-18.9.0/AndroidManifest.xml:17:13-43
+92            android:exported="false" >
+92-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/user/.gradle/caches/transforms-3/6c0561e1c87bef49df048e30c7a124e4/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:11:13-37
+93            <meta-data
+93-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/user/.gradle/caches/transforms-3/6c0561e1c87bef49df048e30c7a124e4/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:12:13-14:85
+94                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+94-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/user/.gradle/caches/transforms-3/6c0561e1c87bef49df048e30c7a124e4/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:13:17-120
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/user/.gradle/caches/transforms-3/6c0561e1c87bef49df048e30c7a124e4/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:14:17-82
+96            <meta-data
+96-->[com.google.mlkit:vision-common:17.3.0] /Users/user/.gradle/caches/transforms-3/b06e996754df58f6f9b943da924094f9/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:12:13-14:85
+97                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+97-->[com.google.mlkit:vision-common:17.3.0] /Users/user/.gradle/caches/transforms-3/b06e996754df58f6f9b943da924094f9/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:13:17-124
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.mlkit:vision-common:17.3.0] /Users/user/.gradle/caches/transforms-3/b06e996754df58f6f9b943da924094f9/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:14:17-82
+99            <meta-data
+99-->[com.google.mlkit:common:18.9.0] /Users/user/.gradle/caches/transforms-3/5f745a34c6c52aab1659caa5e3026e01/transformed/jetified-common-18.9.0/AndroidManifest.xml:20:13-22:85
+100                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+100-->[com.google.mlkit:common:18.9.0] /Users/user/.gradle/caches/transforms-3/5f745a34c6c52aab1659caa5e3026e01/transformed/jetified-common-18.9.0/AndroidManifest.xml:21:17-120
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.mlkit:common:18.9.0] /Users/user/.gradle/caches/transforms-3/5f745a34c6c52aab1659caa5e3026e01/transformed/jetified-common-18.9.0/AndroidManifest.xml:22:17-82
+102        </service>
+103
+104        <provider
+104-->[com.google.mlkit:common:18.9.0] /Users/user/.gradle/caches/transforms-3/5f745a34c6c52aab1659caa5e3026e01/transformed/jetified-common-18.9.0/AndroidManifest.xml:9:9-13:38
+105            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+105-->[com.google.mlkit:common:18.9.0] /Users/user/.gradle/caches/transforms-3/5f745a34c6c52aab1659caa5e3026e01/transformed/jetified-common-18.9.0/AndroidManifest.xml:10:13-78
+106            android:authorities="com.nubbleapp.mlkitinitprovider"
+106-->[com.google.mlkit:common:18.9.0] /Users/user/.gradle/caches/transforms-3/5f745a34c6c52aab1659caa5e3026e01/transformed/jetified-common-18.9.0/AndroidManifest.xml:11:13-69
+107            android:exported="false"
+107-->[com.google.mlkit:common:18.9.0] /Users/user/.gradle/caches/transforms-3/5f745a34c6c52aab1659caa5e3026e01/transformed/jetified-common-18.9.0/AndroidManifest.xml:12:13-37
+108            android:initOrder="99" />
+108-->[com.google.mlkit:common:18.9.0] /Users/user/.gradle/caches/transforms-3/5f745a34c6c52aab1659caa5e3026e01/transformed/jetified-common-18.9.0/AndroidManifest.xml:13:13-35
+109
+110        <activity
+110-->[com.google.android.gms:play-services-base:18.1.0] /Users/user/.gradle/caches/transforms-3/c59a55b27e44a3e0723d16f567fd1d1e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+111            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+111-->[com.google.android.gms:play-services-base:18.1.0] /Users/user/.gradle/caches/transforms-3/c59a55b27e44a3e0723d16f567fd1d1e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+112            android:exported="false"
+112-->[com.google.android.gms:play-services-base:18.1.0] /Users/user/.gradle/caches/transforms-3/c59a55b27e44a3e0723d16f567fd1d1e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+113            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+113-->[com.google.android.gms:play-services-base:18.1.0] /Users/user/.gradle/caches/transforms-3/c59a55b27e44a3e0723d16f567fd1d1e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+114
+115        <meta-data
+115-->[com.google.android.gms:play-services-basement:18.1.0] /Users/user/.gradle/caches/transforms-3/0a7cb7034eac515addf17ce8efdbda3b/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+116            android:name="com.google.android.gms.version"
+116-->[com.google.android.gms:play-services-basement:18.1.0] /Users/user/.gradle/caches/transforms-3/0a7cb7034eac515addf17ce8efdbda3b/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+117            android:value="@integer/google_play_services_version" />
+117-->[com.google.android.gms:play-services-basement:18.1.0] /Users/user/.gradle/caches/transforms-3/0a7cb7034eac515addf17ce8efdbda3b/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+118
+119        <provider
+119-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+120            android:name="androidx.startup.InitializationProvider"
+120-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+121            android:authorities="com.nubbleapp.androidx-startup"
+121-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+122            android:exported="false" >
+122-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+123            <meta-data
+123-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+124                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+124-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+125                android:value="androidx.startup" />
+125-->[androidx.emoji2:emoji2:1.2.0] /Users/user/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+126            <meta-data
+126-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/user/.gradle/caches/transforms-3/71b91ea8216105cda74b0317da307340/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+127                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+127-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/user/.gradle/caches/transforms-3/71b91ea8216105cda74b0317da307340/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+128                android:value="androidx.startup" />
+128-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/user/.gradle/caches/transforms-3/71b91ea8216105cda74b0317da307340/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+129        </provider>
+130
+131        <service
+131-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/user/.gradle/caches/transforms-3/3c8ce7608c11d2c124765c7472926828/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+132            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+132-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/user/.gradle/caches/transforms-3/3c8ce7608c11d2c124765c7472926828/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+133            android:exported="false" >
+133-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/user/.gradle/caches/transforms-3/3c8ce7608c11d2c124765c7472926828/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+134            <meta-data
+134-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/user/.gradle/caches/transforms-3/3c8ce7608c11d2c124765c7472926828/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+135                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+135-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/user/.gradle/caches/transforms-3/3c8ce7608c11d2c124765c7472926828/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+136                android:value="cct" />
+136-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/user/.gradle/caches/transforms-3/3c8ce7608c11d2c124765c7472926828/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+137        </service>
+138        <service
+138-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/user/.gradle/caches/transforms-3/befcb08de6fa27f7bf4fb54dada3cb3d/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
+139            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+139-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/user/.gradle/caches/transforms-3/befcb08de6fa27f7bf4fb54dada3cb3d/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
+140            android:exported="false"
+140-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/user/.gradle/caches/transforms-3/befcb08de6fa27f7bf4fb54dada3cb3d/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
+141            android:permission="android.permission.BIND_JOB_SERVICE" >
+141-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/user/.gradle/caches/transforms-3/befcb08de6fa27f7bf4fb54dada3cb3d/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
+142        </service>
+143
+144        <receiver
+144-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/user/.gradle/caches/transforms-3/befcb08de6fa27f7bf4fb54dada3cb3d/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
+145            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+145-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/user/.gradle/caches/transforms-3/befcb08de6fa27f7bf4fb54dada3cb3d/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
+146            android:exported="false" />
+146-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/user/.gradle/caches/transforms-3/befcb08de6fa27f7bf4fb54dada3cb3d/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
+147    </application>
+148
+149</manifest>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.nubbleapp-mergeDebugResources-36:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "com.nubbleapp-mergeDebugResources-39:/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "/Users/user/.gradle/caches/transforms-3/b3627ca143232ec2ceb6e319eb18971d/transformed/appcompat-1.6.1/res/values-sw600dp-v13/values-sw600dp-v13.xml",
