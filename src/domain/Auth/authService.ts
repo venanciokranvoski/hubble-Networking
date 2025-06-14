@@ -1,7 +1,7 @@
 import { apiConfig } from '@api';
 import { authAdapter } from './authAdpter';
 import { authApi } from './authApi';
-import { AuthCredentials, SignUpData } from './authTypes';
+import { AuthCredentials, EditPasswordParams, SignUpData } from './authTypes';
 
 async function signIn(
   email: string,
@@ -33,14 +33,14 @@ async function removeToken() {
   apiConfig.defaults.headers.common.Authorization = null;
 }
 
-async function isUserNameAvailable(username: string): Promise<boolean> {
-  const { isAvailable } = await authApi.isUserNameAvailable({username});
-  return isAvailable;
+async function requestNewPassword(email: string): Promise<string>{
+  const {message} = await authApi.forgotPassword({email});
+  return message;
 }
 
-async function isEmailAvailable(email: string): Promise<boolean> {
-  const { isAvailable } = await authApi.isUserNameAvailable({email});
-  return isAvailable;
+async function updatePassword(params: EditPasswordParams): Promise<string>{
+  const {message} = await authApi.editPassword(params);
+  return message;
 }
 
 async function authenticatedByRefleshToken(refleshToken: string ): Promise<AuthCredentials> {
@@ -56,8 +56,8 @@ export const authService = {
   updateToken,
   removeToken,
   signUp,
-  isUserNameAvailable,
-  isEmailAvailable,
+  updatePassword,
+  requestNewPassword,
   authenticatedByRefleshToken,
   isRefleshToken: authApi.IsRefreshIsToken
 };

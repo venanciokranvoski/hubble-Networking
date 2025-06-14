@@ -1,14 +1,15 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { AppStack, AuthStack } from '@routes';
 import { useAuthCredentials } from '@services';
 import { Activityindicator, Box } from '@components';
 
-export function Router() {
-  // const authenticated = false;
-  const { authCredentials, isLoading } = useAuthCredentials();
+import {AppStack} from './AppStack';
+import {AuthStack} from './AuthStack';
+import {OnbordingStack} from './OnbordingStack';
+import {Stacks, useRouter} from './useRouter';
 
-  if (isLoading) {
+
+  function IsLoadingScreen() {
     return (
       <Box
         flex={1}
@@ -21,9 +22,19 @@ export function Router() {
     );
   }
 
-  return (
-    <NavigationContainer>
-      {authCredentials ? <AppStack  /> : <AuthStack />}
-    </NavigationContainer>
-  );
-}
+  const stacks: Record<Stacks, React.ReactElement> = {
+    loading: <IsLoadingScreen />,
+    Auth: <AuthStack />, 
+    App: <AppStack />,
+    Onbording: <OnbordingStack />
+  }
+
+  export function Router(){
+    const stack = useRouter();
+
+    const Stack = stacks[stack];
+
+    return <NavigationContainer>{Stack}</NavigationContainer>
+  }
+
+

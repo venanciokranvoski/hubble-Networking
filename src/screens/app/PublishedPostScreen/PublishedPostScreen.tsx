@@ -33,7 +33,7 @@ import { usePostCreate } from '@domain';
         <Screen scrollable canGoBack title="Nove Post">
         <Image
             source={{
-            uri: route.params.imageURL,
+            uri: imageUri,
             width: IMAGE_WIDTH,
             height: IMAGE_WIDTH,
             }}

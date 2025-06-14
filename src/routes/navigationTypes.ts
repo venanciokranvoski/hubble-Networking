@@ -1,6 +1,6 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { AppStackParamList } from './AppStack';
-import { AuthStackScreenProps } from '@routes';
+import { AuthStackScreenProps, OnbordingStackParamList } from '@routes';
 import { CompositeScreenProps } from '@react-navigation/native';
 import { AppTabBottomTabParamList } from './AppTabNavigator';
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
@@ -10,6 +10,8 @@ declare global {
     interface RootParamList extends AuthStackScreenProps, AppStackParamList {}
   }
 }
+
+export type OnbordingScreenProps<RouteName extends keyof OnbordingStackParamList, > = NativeStackScreenProps<OnbordingStackParamList, RouteName>;
 
 // interfaces Generics
 export type AppScreenProps<T extends keyof AppStackParamList> =

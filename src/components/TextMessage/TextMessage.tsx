@@ -44,7 +44,7 @@ export function TextMessage({
           {...RNTextInputProps}
         />
         <Pressable disabled={disableMessage} onPress={()=> onPressSend(value || '')}>
-          <Text color={disableMessage ? 'gray2' : 'primary'}>Enviar</Text>
+          <Text color={disableMessage ? 'gray2' : 'greenvPrimary'}>Enviar</Text>
         </Pressable>
       </Box>
     </Pressable>

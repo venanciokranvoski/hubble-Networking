@@ -8,6 +8,7 @@ import {
 import { Box, BoxProps } from '../Box/Box';
 import { $fontFamily, $fontSizes, Text } from '../Text/Text';
 import { useAppTheme } from '../../hooks/useAppTheme';
+import { colors } from '@theme';
 
 export interface TextInputProps extends RNTextInputProps {
   label?: string;
@@ -50,7 +51,7 @@ export function TextInput({
                 {label}
           </Text>
         )}
-        <Box {...$textInputContainer} {...containerProps}>
+        <Box {...$textInputContainer} {...containerProps} backgroundColor='grayWhite'>
           {LeftComponent&& (
             <Box justifyContent="center" mr="s16">
               {LeftComponent}
@@ -81,6 +82,7 @@ export const $textInputStyle: TextStyle = {
   padding: 0,
   flexGrow: 1,
   flexShrink: 1,
+  color: colors.palette.grayBlack, 
   fontFamily: $fontFamily.regular,
   ...$fontSizes.paragraphMedium,
 };

@@ -50,7 +50,7 @@ export interface IconProps {
 
 export function Icon({
   name,
-  color = 'grayBlack',
+  color = 'backgroundContrast',
   fillColor = 'background',
   size,
   onPress,

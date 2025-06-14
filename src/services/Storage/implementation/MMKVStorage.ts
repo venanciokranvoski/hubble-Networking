@@ -1,5 +1,5 @@
 import { MMKV } from 'react-native-mmkv';
-import { Storage } from '../storage';
+import { Storage } from '../Storage';
 
 const MMKVInstance = new MMKV();
 
@@ -14,5 +14,5 @@ export const MMKVStorage: Storage = {
   setItem: async (key, value) => {
     MMKVInstance.set(key, JSON.stringify(value));
   },
-  removeItem: async (name) => MMKVInstance.delete(name),
+  removeItem: async key => MMKVInstance.delete(key),
 };

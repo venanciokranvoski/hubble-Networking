@@ -15,3 +15,6 @@ export * from './app/PublishedPostScreen/PublishedPostScreen';
 export * from './app/PostCommentedScreen/PostComponentScreen';
 export * from './app/SearchScreen/SearchScreen';
 export * from './app/CameraScreen/CameraScreen';
+export * from './app/DarkModeScreen/DarkModeScreen';
+
+export * from './app/Onbording/OnbordingScreen/OnbordingScreen';

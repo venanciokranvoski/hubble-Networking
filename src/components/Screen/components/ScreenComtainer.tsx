@@ -25,7 +25,7 @@ export function ScreenComponent({ title, canGoBack, HeaderComponent, ...BoxProps
           alignItems="center"
           justifyContent="space-between"
           onPress={navigation.canGoBack}
-          mr='s10'
+          mr={showBackLabel ? 's10' : undefined}
         >
           <Icon
             name="arrowLeftIcon"

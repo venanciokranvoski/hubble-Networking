@@ -1,5 +1,3 @@
-// import { asyncStorage } from './implementation/asyncStorage';
-import { MMKVStorage } from './implementation/MMKVStorage';
 
 export interface Storage {
   getItem: <T = unknown>(key: string) => Promise<T | null>;

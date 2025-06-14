@@ -17,6 +17,8 @@ import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
 // expo
 import expo.modules.ExpoModulesPackage;
+// react-native-bootsplash
+import com.zoontek.rnbootsplash.RNBootSplashPackage;
 // react-native-mmkv
 import com.reactnativemmkv.MmkvPackage;
 // react-native-permissions
@@ -79,6 +81,7 @@ public class PackageList {
       new AsyncStoragePackage(),
       new CameraRollPackage(),
       new ExpoModulesPackage(),
+      new RNBootSplashPackage(),
       new MmkvPackage(),
       new RNPermissionsPackage(),
       new SafeAreaContextPackage(),

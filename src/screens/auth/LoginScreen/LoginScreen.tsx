@@ -47,10 +47,10 @@ export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
   return (
     <Screen>
       <View style={{ paddingHorizontal: 24 }}>
-        <Text color="grayBlack" marginBottom="s8" preset="headingLarge">
+        <Text color="grayWhite" marginBottom="s8" preset="headingLarge">
           Olá
         </Text>
-        <Text color="grayBlack" preset="paragraphLarge" mb="s40">
+        <Text color="grayWhite" preset="paragraphLarge" mb="s40">
           Digite seu e-mail e senha para entrar
         </Text>
 

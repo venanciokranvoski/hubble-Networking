@@ -29,10 +29,12 @@ module.exports = {
             'newlines-between': 'always',
           },
         ],
+          'react-native/no-inline-styles': 'off',
       },
        // Test files only
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],
     },
   ],
+
 };

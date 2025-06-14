@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.nubbleapp-mergeDebugResources-39:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "/Users/user/Documents/Study/hubble-Networking/node_modules/react-native-bootsplash/android/build/intermediates/packaged_res/debug/values-v29/values-v29.xml",
+                    "from": {
+                        "startLines": "2,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,218",
+                        "endLines": "4,15",
+                        "endColumns": "12,12",
+                        "endOffsets": "213,858"
+                    }
+                }
+            ]
+        }
+    ]
+}

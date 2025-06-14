@@ -2,8 +2,10 @@ import { apiConfig } from '@api';
 import {AxiosRequestConfig} from 'axios';
 import { UserApi } from '../User';
 import { AuthCredentialAPI,
-         SignUpDataAPI, 
-         FildIsAvailableAPI 
+          SignUpDataAPI, 
+          FieldIsAvailableAPI, 
+          EditPasswordParams,
+          ForgotPasswordParam
         } from './authTypes';
 
 
@@ -32,22 +34,33 @@ async function signUp(data: SignUpDataAPI): Promise<UserApi> {
 
 async function isUserNameAvailable(params: {
   username: string;
-}): Promise<FildIsAvailableAPI> {
-  const response = await apiConfig.get<FildIsAvailableAPI>('auth/validate-username', {
+}): Promise<FieldIsAvailableAPI> {
+  const response = await apiConfig.get<FieldIsAvailableAPI>('auth/validate-username', {
     params
   });
 
   return response.data;
 }
 
-async function isEmailAvailable(params: {
-  email: string;
-}): Promise<FildIsAvailableAPI> {
-  const response = await apiConfig.get<FildIsAvailableAPI>('auth/validate-email', {
+async function forgotPassword(
+  params: ForgotPasswordParam,
+): Promise<{message: string}> {
+  const response = await apiConfig.post<{message: string}>(
+    'auth/forgot-password',
     params,
-  });
-  console.log(response.data)
+  );
+
   return response.data;
+}
+
+async function editPassword(
+  params: EditPasswordParams,
+): Promise<{message: string}> {
+  const response = await apiConfig.post<{message: string}>(
+    `auth/profile/edit-password`,
+    params,
+  );
+  return response.data
 }
 
 
@@ -72,7 +85,8 @@ export const authApi = {
   signOut,
   signUp,
   isUserNameAvailable,
-  isEmailAvailable,
-  refleshToken,
-  IsRefreshIsToken
+  editPassword,
+  forgotPassword,
+  IsRefreshIsToken,
+  refleshToken
 };

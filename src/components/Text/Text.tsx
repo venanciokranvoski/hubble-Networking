@@ -19,7 +19,7 @@ export interface TextProps extends SRTextProps {
 
 export function Text({
   children,
-  preset = "headingSmall",
+  preset = "paragraphMedium",
   bold,
   italic,
   semiBold,
@@ -30,6 +30,7 @@ export function Text({
   const fontFamily = getFontFamily(preset, bold, italic, semiBold);
   return (
     <SRText
+      color="backgroundContrast"
       style={[$fontSizes[preset], { fontFamily }, style]}
       {...SrTextProps}
     >

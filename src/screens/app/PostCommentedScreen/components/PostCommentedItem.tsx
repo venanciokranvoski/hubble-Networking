@@ -56,10 +56,10 @@ export function PostCommentedItem({
       >
         <ProfileAvatar imageURL={postCommented.author.profileURL} />
         <Box marginLeft="s12" flex={1}>
-          <Text preset="paragraphSmall" color="grayBlack" bold>
+          <Text preset="paragraphSmall"  bold>
             {postCommented.author.userName}
           </Text>
-          <Text preset="paragraphSmall" color="gray1">
+          <Text preset="paragraphSmall" color="paragraph">
             {postCommented.message} - {postCommented.createdAtRelative}
           </Text>
         </Box>

@@ -11,7 +11,7 @@ import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { mapScreenToProps } from './mapScreenToProps';
 import { AppTabBottomTabParamList } from './AppTabNavigator';
-import { $shadowProps } from '@theme';
+import { $shadowProps, colors } from '@theme';
 import { useAppSafeArea } from '@hooks';
 
 export function AppTabBar({
@@ -89,6 +89,6 @@ const $itemTouchable: TouchableOpacityVenonProps = {
 
 const $BoxStyles: BoxProps = {
   padding: 's12',
-  backgroundColor: 'grayWhite',
+  backgroundColor: 'background',
   flexDirection: 'row',
 };
